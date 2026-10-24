@@ -1,0 +1,14 @@
+/devpost/learner-profile.md
+.env
+.env.*
+!.env.example
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+.vercel
+# Skill pack install (reinstall with: npx skills add challengepost/learn-ai-basics --all -y; see skills-lock.json)
+.agents/
+.claude/
+agent/

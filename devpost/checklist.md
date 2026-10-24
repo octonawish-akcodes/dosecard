@@ -1,0 +1,95 @@
+---
+doc: checklist
+status: approved
+---
+
+# Build Checklist
+
+Build mode: fast (the learner asked for the fewest rounds; hands-on checks are still done at the checkpoints below)
+
+## Slices
+
+- [x] **1. You can type medicines and see the fridge card**
+  Becomes usable: A running app where typing a medicine (name, amount, times, food) instantly shows it on an English card in coloured time-of-day rows with pictures and food markers.
+  Why now: The card is the unique kernel, so it comes first. It also carries the scaffold (Next.js, Tailwind, palette, fonts), so every later slice has somewhere to land.
+  PRD ref: `prd.md > Checking and editing medicines`, `prd.md > The card`, `prd.md > Look and Feel`, `prd.md > States and Boundaries` (first visit, no time ticked)
+  Spec ref: `spec.md > Stack`, `spec.md > Look and Feel`, `spec.md > Medicine list`, `spec.md > Card preview`, `spec.md > Data Model`, `spec.md > File Structure`
+  Build:
+  - Scaffold the Next.js 16 app with pnpm, Tailwind v4 and Vitest.
+  - `lib/types.ts`, and `lib/card.ts` with `buildCard`.
+  - `components/icons.tsx`, `MedicineList.tsx` and `Card.tsx`.
+  - `app/page.tsx` with the two-panel layout, and `globals.css` / `card.css` with the palette.
+  - The first-visit example card.
+  Verify (mechanical): `pnpm test` passes the `buildCard` tests: grouping, empty rows dropped, no-time medicines held back, a twice-a-day medicine in two rows. `pnpm build` succeeds. The dev server renders the page, and a medicine typed in the browser appears on the card (checked in Chrome).
+  Learner check: Run `pnpm dev`, open http://localhost:3000, add two medicines (one twice a day, after food), and see whether the card looks like something you'd stick on a fridge.
+  Commit: `Type medicines and see the fridge card`
+
+- [ ] **2. A prescription photo fills the list**
+  Becomes usable: Upload a prescription photo, or press "Try a sample prescription", and the medicines appear as editable rows with "Please check" marks. If reading fails, a clear message appears and typing still works.
+  Why now: The Gemini reader is the riskiest dependency (accuracy, Indian shorthand, free-tier limits), so we prove it straight after the kernel exists.
+  PRD ref: `prd.md > Reading the prescription`, `prd.md > The Core Journey` (steps 1–3), `prd.md > States and Boundaries` (reading, can't be read, reader unavailable)
+  Spec ref: `spec.md > Start panel`, `spec.md > Reader client (`lib/read.ts`, browser)`, `spec.md > Reader function (`app/api/read/route.ts`, server)`, `spec.md > External Services and Dependencies`, `spec.md > Important Failure Modes`
+  Build:
+  - Create the fictional sample prescription image `public/sample/prescription.jpg`, using Indian shorthand and labelled as a sample.
+  - `lib/reader.ts`: prompt, zod schema and model fallback.
+  - `app/api/read/route.ts`, plus `lib/read.ts` to shrink the image and call the route.
+  - `StartPanel.tsx` with the reading, error and unavailable states.
+  - Record `public/sample/reading.json` from a real run, as the labelled fallback for the sample.
+  Verify (mechanical): Unit tests cover mapping the reader's output to rows and the unsure flags. A `curl` of the sample image to `/api/read` returns the sample's medicines with the correct times and food (compared with the paper). A non-image request returns 400. With the key removed, the sample still returns the saved reading, and an upload shows the error message (checked in Chrome).
+  Learner check: Press "Try a sample prescription", compare every row with the sample image, fix one field, and watch the card update.
+  Commit: `Read a prescription photo into the medicine list`
+
+- [ ] **3. The card speaks the grandparent's language and prints**
+  Becomes usable: Pick any of the 16 languages and the card shows bilingual labels in the right script (Urdu/Arabic right to left). Add a name and an "If unsure, call" phone number. Print gives a one-page A4 card, and the list survives a refresh.
+  Why now: Bilingual labels are part of the kernel, but they sit on top of a working card; printing and persistence finish the core journey.
+  PRD ref: `prd.md > Languages`, `prd.md > The card` (header, footer, print), `prd.md > States and Boundaries` (closing and coming back)
+  Spec ref: `spec.md > Translations (`lib/translations.ts`)`, `spec.md > Card details`, `spec.md > Print`, `spec.md > Saved list (`lib/storage.ts`)`, `spec.md > Stack` (fonts)
+  Build:
+  - `lib/translations.ts` covering 16 languages.
+  - The Noto fonts per script in `layout.tsx`.
+  - `CardDetails.tsx`.
+  - `lang`/`dir` handling in `Card.tsx`.
+  - The `@media print` rules.
+  - `lib/storage.ts`, wired into the page.
+  Verify (mechanical): Translation tests: every language has every label, and `dir` is correct. `pnpm build` passes. In Chrome:
+  - Hindi, Tamil, Urdu and Chinese all render with no missing-glyph boxes.
+  - Urdu reads right to left.
+  - The print preview is one A4 page showing only the card.
+  - A refresh keeps the list.
+  Learner check: Switch the card to Hindi and then to your second-favourite language, read the Hindi labels for mistakes, and open the print preview.
+  Commit: `Bilingual card in 16 languages, print and saved list`
+
+- [ ] **4. Anyone can try it from a live link**
+  Becomes usable: A public Vercel URL where a judge can press "Try a sample prescription" and print a card with no account. The repo has an MIT licence and a README with run steps.
+  Why now: Deploying is the last step because it only packages the working journey; it gives judges and the video a live site.
+  PRD ref: `prd.md > What We're Building`
+  Spec ref: `spec.md > Where It Runs and How Someone Tries It`
+  Build:
+  - `LICENSE` (MIT), `README.md` (what it is, how to run, sample-data and translation notes), and `.env.example`.
+  - Create the Vercel project `dosecard`, set `GOOGLE_GENERATIVE_AI_API_KEY` through stdin, and deploy to production.
+  Verify (mechanical): The live URL returns 200, and `/api/read` with the sample returns medicines on the live site. The core journey works on the live site in Chrome at desktop and phone widths.
+  Learner check: Open the live link on your phone, press "Try a sample prescription", and open the card.
+  Commit: `README, licence and live deploy`
+
+## Hands-on Checkpoints
+
+- [ ] Early usable behavior explored — after slice 2: sample prescription → list → card
+- [ ] Final kick-the-tires exploration and feedback completed
+
+## Final Review
+
+- [ ] Final review complete — feedback resolved and learner confirms ready to ship
+
+## Code Tour and App Map
+
+- [ ] Learning activity complete — guided route, focused alternative, prior practice connected, or brief recap
+- [ ] Optional edit and transfer reflection addressed — offered/declined/already covered/not applicable as appropriate
+- [ ] `devpost/app-map.html` generated from finished code, checked, and shown, including a project-grounded practice to reuse
+
+Activity and evidence:
+Route and stops:
+Edit outcome:
+Reflection:
+Activity mode:
+
+## Revisions

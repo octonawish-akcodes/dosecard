@@ -1,0 +1,107 @@
+/* The printable card. Sized in mm so the screen preview matches the A4 print. */
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 186mm;
+  margin: 0 auto;
+  background: #fff;
+  color: var(--ink);
+  border: 1.5px solid var(--line);
+  border-radius: 6mm;
+  padding: 8mm;
+  display: flex;
+  flex-direction: column;
+  gap: 4mm;
+}
+
+.card-example > :not(.card-example-tag) {
+  opacity: 0.28;
+  filter: grayscale(0.3);
+}
+.card-example-tag {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--paper);
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  padding: 0.6rem 1.4rem;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.bi { display: inline-flex; flex-direction: column; line-height: 1.15; }
+.bi-local { font-size: 0.92em; font-weight: 700; color: var(--ink); }
+.bi-local[dir="rtl"] { text-align: right; }
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 4mm;
+  border-bottom: 1.5px solid var(--line);
+  padding-bottom: 3mm;
+}
+.card-title { font-family: var(--font-display); font-size: 22pt; }
+.card-title .bi-local { font-family: inherit; font-size: 16pt; }
+.card-patient { font-size: 18pt; font-weight: 700; text-align: right; }
+
+.band {
+  display: grid;
+  grid-template-columns: 34mm 1fr;
+  gap: 4mm;
+  border-radius: 4mm;
+  padding: 4mm;
+  break-inside: avoid;
+}
+.band-morning { background: var(--morning); }
+.band-afternoon { background: var(--afternoon); }
+.band-evening { background: var(--evening); }
+.band-night { background: var(--night); color: #fff; }
+.band-night .bi-local { color: #fff; }
+.band-needed { background: var(--needed); }
+
+.band-label { display: flex; flex-direction: column; align-items: flex-start; gap: 1.5mm; }
+.band-icon { width: 17mm; height: 17mm; }
+.band-name { font-size: 15pt; font-weight: 700; }
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(52mm, 1fr));
+  gap: 3mm;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.tile {
+  background: #fff;
+  color: var(--ink);
+  border: 1.5px solid color-mix(in srgb, var(--ink) 18%, transparent);
+  border-radius: 3mm;
+  padding: 3mm 3.5mm;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5mm;
+}
+.tile .bi-local { color: var(--ink); }
+.tile-name { font-size: 19pt; font-weight: 700; line-height: 1.1; overflow-wrap: anywhere; }
+.tile-amount, .tile-food { display: flex; align-items: center; gap: 2.5mm; font-size: 12.5pt; }
+.tile-note { font-size: 11pt; color: var(--muted); }
+.pill-marks { display: inline-flex; gap: 1mm; flex-shrink: 0; }
+.pill-mark { width: 7mm; height: 4.2mm; }
+.food-mark { height: 7mm; width: auto; flex-shrink: 0; }
+
+.card-foot {
+  border-top: 1.5px solid var(--line);
+  padding-top: 3mm;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5mm;
+}
+.card-call { font-size: 15pt; display: flex; align-items: center; gap: 3mm; flex-wrap: wrap; }
+.card-call strong { font-size: 18pt; }
+.card-small { font-size: 9.5pt; color: var(--muted); }
+.card-small .bi-local { color: var(--muted); font-weight: 400; }
