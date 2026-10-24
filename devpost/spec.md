@@ -53,7 +53,7 @@ Reuses the versions already working in the learner's other Next.js project (FanD
   1. Copy `.env.example` to `.env.local`.
   2. Set `GOOGLE_GENERATIVE_AI_API_KEY` to a key from https://aistudio.google.com/apikey.
   3. Run `pnpm install && pnpm dev` and open http://localhost:3000.
-- **Deployed (chosen, optional for the rules):** Vercel, project `dosecard`. Run `vercel deploy --prod` and set `GOOGLE_GENERATIVE_AI_API_KEY` in Vercel's environment variables. Judges get a live link with **Try a sample prescription** and need no account.
+- **Deployed (chosen, optional for the rules):** Vercel, project `dosecard`, live at https://dosecard.vercel.app. Run `vercel deploy --prod` and set `GOOGLE_GENERATIVE_AI_API_KEY` in Vercel's environment variables. Judges get a live link with **Try a sample prescription** and need no account.
 - **Required for submission:**
   - a demo video under 3 minutes, public on YouTube or Vimeo, recorded from the live site;
   - a public GitHub repo with an MIT `LICENSE` that shows in the About box;

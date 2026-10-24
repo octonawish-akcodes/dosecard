@@ -48,7 +48,7 @@ export function DoseCardApp() {
   );
 
   return (
-    <main className="mx-auto grid max-w-[1400px] gap-8 px-4 py-6 md:px-8 lg:grid-cols-[minmax(0,30rem)_minmax(0,1fr)] lg:py-10">
+    <main className="mx-auto grid max-w-[1400px] grid-cols-[minmax(0,1fr)] gap-8 px-4 py-6 md:px-8 lg:grid-cols-[minmax(0,30rem)_minmax(0,1fr)] lg:py-10">
       <section aria-labelledby="app-title" className="app-panel">
         <h1 id="app-title" className="font-display text-4xl text-ink">
           Dose Card

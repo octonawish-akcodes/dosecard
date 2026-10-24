@@ -59,7 +59,7 @@ Build mode: fast (the learner asked for the fewest rounds; hands-on checks are s
   Learner check: Switch the card to Hindi and then to your second-favourite language, read the Hindi labels for mistakes, and open the print preview.
   Commit: `Bilingual card in 16 languages, print and saved list`
 
-- [ ] **4. Anyone can try it from a live link**
+- [x] **4. Anyone can try it from a live link**
   Becomes usable: A public Vercel URL where a judge can press "Try a sample prescription" and print a card with no account. The repo has an MIT licence and a README with run steps.
   Why now: Deploying is the last step because it only packages the working journey; it gives judges and the video a live site.
   PRD ref: `prd.md > What We're Building`
@@ -93,6 +93,8 @@ Reflection:
 Activity mode:
 
 ## Revisions
+- The page grid needed `minmax(0,1fr)` columns, plus phone-sized chart text, so the chart fits a 390 px screen without sideways scrolling. Found while checking the live site at phone width.
+- Live URL: https://dosecard.vercel.app (Vercel project `dosecard`). `vercel link` also added `.env*` to `.gitignore`; `!.env.example` was added so the example file stays in the repo.
 - Noto Sans Devanagari loads with `weight: "variable"`. The static 400/700 weights fail the Turbopack build ("next/font/google queries have exactly one entry"); the other scripts use static weights.
 - Saving waits until the saved list has been restored. In development React runs effects twice, and the empty first render was overwriting the saved list.
 - Card design changed from picture tiles in time-of-day bands to a tick chart (medicines down the side, times across). At the first hands-on check the learner said the design "looks very complex" and asked for easy options. They chose the tick chart from four rendered designs. `buildCard` was replaced by `buildChart`; PRD > The card and spec > Card preview were updated.

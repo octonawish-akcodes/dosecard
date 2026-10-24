@@ -85,6 +85,23 @@
 .chart-dash { color: var(--line); font-weight: 400; }
 .chart-c-needed:has(.bi) { background: var(--needed); }
 
+/* ---- Phones: same chart, tighter ---- */
+@media screen and (max-width: 640px) {
+  .card { padding: 4mm; border-radius: 4mm; }
+  .card-title { font-size: 17pt; }
+  .card-patient { font-size: 13pt; }
+  .chart-name-h { width: 31%; }
+  .chart th, .chart td { padding: 1.5mm 0.4mm; overflow-wrap: normal; }
+  .chart-h { font-size: 7pt; }
+  .chart-h .bi-local { overflow-wrap: anywhere; }
+  .chart-icon { width: 7mm; height: 7mm; }
+  .chart-name { font-size: 11pt; padding-left: 1.5mm !important; }
+  .chart-food, .chart-note { font-size: 8.5pt; }
+  .chart-cell { font-size: 7.5pt; }
+  .pill-mark { width: 5mm; height: 3mm; }
+  .card-example-tag { font-size: 1rem; padding: 0.4rem 0.9rem; }
+}
+
 /* ---- Printing: only the card, on one A4 page ---- */
 @page {
   size: A4;
