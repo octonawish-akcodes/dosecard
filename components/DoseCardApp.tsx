@@ -7,6 +7,7 @@ import { blankMedicine } from "@/lib/types";
 import { Card } from "./Card";
 import { CardDetails } from "./CardDetails";
 import { MedicineList } from "./MedicineList";
+import { ShareButtons } from "./ShareButtons";
 import { StartPanel } from "./StartPanel";
 
 /** Shown faintly on first visit so the family member can see what they're making. */
@@ -90,12 +91,16 @@ export function DoseCardApp() {
 
         <div className="mt-6 grid gap-2">
           {printButton}
+          <ShareButtons card={{ medicines: state.medicines, lang: state.lang, patient: state.patient }} disabled={empty} />
           {!empty && (
             <a href="#card" className="btn-quiet text-center lg:hidden">
               See card
             </a>
           )}
-          <p className="text-sm text-muted">Saved in this browser only. Nothing is stored on our server.</p>
+          <p className="text-sm text-muted">
+            Saved in this browser only. The printed QR code and shared links carry the card inside the link itself, so nothing is
+            stored on our server.
+          </p>
         </div>
       </div>
 

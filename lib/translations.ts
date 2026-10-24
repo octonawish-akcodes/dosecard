@@ -18,6 +18,11 @@ export type Labels = {
   disclaimer: string;
   /** Heading of the picture key at the foot of the card. */
   key: string;
+  /** Under the QR code on the card. */
+  listen: string;
+  /** The talking card page. */
+  playAll: string;
+  tapTime: string;
 };
 
 const L = (
@@ -41,6 +46,9 @@ const L = (
   made,
   disclaimer,
   key: "",
+  listen: "",
+  playAll: "",
+  tapTime: "",
 });
 
 export const LABELS: Record<LangCode, Labels> = {
@@ -178,7 +186,30 @@ const KEY: Record<LangCode, string> = {
   zh: "图标说明",
   pt: "O que os desenhos significam",
 };
-for (const code of Object.keys(LABELS) as LangCode[]) LABELS[code].key = KEY[code];
+// [under the QR code, play-all button, hint on the talking card]
+const LISTEN: Record<LangCode, [string, string, string]> = {
+  en: ["Scan with a phone to hear this card", "Play all", "Tap a time to hear what to take"],
+  hi: ["फ़ोन से स्कैन करें, कार्ड सुनें", "सब सुनें", "क्या लेना है, सुनने के लिए समय पर दबाएँ"],
+  bn: ["ফোনে স্ক্যান করে কার্ডটি শুনুন", "সব শুনুন", "কী খাবেন শুনতে সময়ে চাপ দিন"],
+  mr: ["फोनने स्कॅन करा, कार्ड ऐका", "सर्व ऐका", "काय घ्यायचे ते ऐकण्यासाठी वेळेवर दाबा"],
+  te: ["ఫోన్‌తో స్కాన్ చేసి ఈ కార్డు వినండి", "అన్నీ వినండి", "ఏం వేసుకోవాలో వినడానికి సమయంపై నొక్కండి"],
+  ta: ["போனில் ஸ்கேன் செய்து இந்த அட்டையைக் கேளுங்கள்", "அனைத்தையும் கேளுங்கள்", "என்ன சாப்பிட வேண்டும் என்று கேட்க நேரத்தைத் தொடுங்கள்"],
+  gu: ["ફોનથી સ્કેન કરો, કાર્ડ સાંભળો", "બધું સાંભળો", "શું લેવું તે સાંભળવા સમય પર દબાવો"],
+  kn: ["ಫೋನ್‌ನಲ್ಲಿ ಸ್ಕ್ಯಾನ್ ಮಾಡಿ, ಕಾರ್ಡ್ ಕೇಳಿ", "ಎಲ್ಲವನ್ನೂ ಕೇಳಿ", "ಏನು ತೆಗೆದುಕೊಳ್ಳಬೇಕು ಎಂದು ಕೇಳಲು ಸಮಯದ ಮೇಲೆ ಒತ್ತಿ"],
+  ml: ["ഫോണിൽ സ്കാൻ ചെയ്ത് കാർഡ് കേൾക്കൂ", "എല്ലാം കേൾക്കൂ", "എന്ത് കഴിക്കണമെന്ന് കേൾക്കാൻ സമയത്തിൽ തൊടൂ"],
+  pa: ["ਫ਼ੋਨ ਨਾਲ ਸਕੈਨ ਕਰੋ, ਕਾਰਡ ਸੁਣੋ", "ਸਭ ਸੁਣੋ", "ਕੀ ਲੈਣਾ ਹੈ ਸੁਣਨ ਲਈ ਸਮੇਂ 'ਤੇ ਦਬਾਓ"],
+  ur: ["فون سے اسکین کریں، کارڈ سنیں", "سب سنیں", "کیا لینا ہے سننے کے لیے وقت پر دبائیں"],
+  es: ["Escanee con el móvil para escuchar esta tarjeta", "Escuchar todo", "Toque una hora para escuchar qué tomar"],
+  fr: ["Scannez avec un téléphone pour écouter cette carte", "Tout écouter", "Touchez un moment pour entendre quoi prendre"],
+  ar: ["امسح الرمز بالهاتف للاستماع إلى البطاقة", "استمع إلى الكل", "اضغط على الوقت لتسمع ما يجب تناوله"],
+  zh: ["用手机扫码收听此卡片", "全部收听", "点按时间，收听该吃什么"],
+  pt: ["Escaneie com o celular para ouvir este cartão", "Ouvir tudo", "Toque num horário para ouvir o que tomar"],
+};
+
+for (const code of Object.keys(LABELS) as LangCode[]) {
+  LABELS[code].key = KEY[code];
+  [LABELS[code].listen, LABELS[code].playAll, LABELS[code].tapTime] = LISTEN[code];
+}
 
 /** The picker's groups, in display order. */
 export const LANGS: { group: string; codes: LangCode[] }[] = [

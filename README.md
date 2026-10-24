@@ -11,6 +11,8 @@ Built for Devpost's **Build With AI: Basics** hackathon with the [Devpost Learn 
 3. **Pick the grandparent's language**. Hindi, Bengali, Marathi, Telugu, Tamil, Gujarati, Kannada, Malayalam, Punjabi and Urdu are available, plus Spanish, French, Arabic, Chinese and Portuguese.
 4. **Print** a one-page A4 tick chart: medicines down the side, Morning / Afternoon / Evening / Night across, with pictures for each time and for before or after food.
 
+5. **Scan the QR code on the card** with any phone to hear it. Tap Morning, Afternoon, Evening or Night and the phone reads what to take, in the card's language, so it works for grandparents who can't read. **Share on WhatsApp** sends the same talking card to family. The card travels inside the link (after `#`), never to our server.
+
 It never gives medical advice. It only copies the prescription, and the family member confirms every row.
 
 ## Evidence
@@ -39,6 +41,7 @@ Without a key, typing and printing still work, and the sample prescription uses 
 
 - **`app/page.tsx` + `components/`**: the single screen with the start buttons, medicine list, card details and live card preview. The list is saved in this browser's `localStorage` only.
 - **`app/api/read/route.ts` + `lib/reader.ts`**: the one server function. It sends the photo to Gemini (`gemini-3.5-flash`, falling back to two other models) with a fixed JSON schema, then validates the result with zod. The photo is never stored or logged.
+- **`lib/share.ts`, `components/CardQR.tsx`, `app/listen/`**: the talking card. The QR link carries the card in its `#` fragment, and `/listen` reads it aloud with the browser's speech voices (`lib/speech.ts`).
 - **`lib/translations.ts`**: the fixed card labels for each language. Switching language is instant and never calls the AI.
 - **`app/card.css`**: the card and the print rules, which print only the card on A4.
 

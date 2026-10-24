@@ -10,6 +10,8 @@ Turns a prescription into a big, picture-based medicine timetable that a grandpa
 ## The Unique Kernel
 The card answers the timing question without anyone being asked. Each medicine sits in a time-of-day row with a picture (sunrise, midday sun, evening, moon) and a before-food or after-food marker. The text is large, and the card is printed in English plus the grandparent's own language, chosen from a list of widely spoken languages. A grandparent who can't read small English print still knows what to take and when.
 
+Added at final review, with the learner's approval: a QR code on the printed card opens a **talking version** on any phone. Tap a time of day and hear what to take, in the grandparent's language, so the card also works for someone who can't read.
+
 ## Who It's For
 A grandchild or adult child in India looking after a grandparent on several medicines. Today the grandparent keeps asking about the timings ("what about the timings and all those imp things"), and the family member answers again and again, or writes it out by hand on paper.
 The family member makes the card; the grandparent reads it.
@@ -42,7 +44,6 @@ The "oh, that's cool" beat is the messy prescription turning into a clean fridge
 - More languages, and a card entirely in one language.
 - Reminders or alarms, and WhatsApp sharing.
 - Saving several family members' cards.
-- Read-aloud for low vision.
 
 ## Explicitly Cut
 - **Medical advice, dose checks, drug-interaction checks:** unsafe to guess. The app only copies the prescription, and the family member confirms everything.

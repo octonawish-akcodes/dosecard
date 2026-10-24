@@ -166,6 +166,14 @@ Implements the site described in `prd.md > Screens and Layout`.
 - **`scripts/render-evals.mjs`:** draws them as photo-like JPGs.
 - **`scripts/eval.mts`:** runs them through `readWithModel()` and scores them with `lib/eval.ts`. Raw readings are cached in `evals/raw/`.
 
+### Talking card and sharing (added at final review)
+Implements `prd.md > Talking card and sharing`.
+- **`lib/share.ts`:** packs the card (name, amount, unit, times, food, note, language, patient) into compact base64url JSON for the link's `#` fragment, `/listen#…`. The fragment is never sent to the server. 8 medicines stay under 900 characters.
+- **`components/CardQR.tsx`:** draws that link as an SVG QR code with the `qrcode` package (MIT), in the card footer.
+- **`app/listen/page.tsx` + `components/Listen.tsx`:** decode the fragment and show large time-of-day buttons.
+- **`lib/speech.ts`:** builds each spoken paragraph. The browser's Web Speech API (`speechSynthesis`) reads it with the phone's voice for the language (`hi-IN`, `ta-IN`, …), falling back to English.
+- **`components/ShareButtons.tsx`:** a `wa.me` link and a clipboard copy.
+
 ## Data Model
 ```ts
 type Time = "morning" | "afternoon" | "evening" | "night" | "needed";

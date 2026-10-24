@@ -2,6 +2,7 @@ import { buildChart, cardName } from "@/lib/card";
 import { ENGLISH, amountText, labels, type Labels } from "@/lib/translations";
 import type { LangCode, Medicine } from "@/lib/types";
 import { legendKeys, type LegendKey } from "@/lib/dose";
+import { CardQR } from "./CardQR";
 import { DoseIcons, DoseShapeIcon, ForkSpoon, HalfTablet, TIME_ICON } from "./icons";
 
 type Props = {
@@ -144,19 +145,27 @@ export function Card({ medicines, lang, patient, phone, made, example, id = "car
       <PictureKey medicines={medicines} l={l} lang={lang} />
 
       <footer className="card-foot">
-        {phone.trim() && (
-          <p className="card-call">
-            <Bi pick={(x) => x.call} l={l} lang={lang} /> <strong dir="ltr">{phone.trim()}</strong>
-          </p>
-        )}
-        {made && (
+        <div className="card-foot-text">
+          {phone.trim() && (
+            <p className="card-call">
+              <Bi pick={(x) => x.call} l={l} lang={lang} /> <strong dir="ltr">{phone.trim()}</strong>
+            </p>
+          )}
+          {made && (
+            <p className="card-small">
+              <Bi pick={(x) => `${x.made} ${made}`} l={l} lang={lang} />
+            </p>
+          )}
           <p className="card-small">
-            <Bi pick={(x) => `${x.made} ${made}`} l={l} lang={lang} />
+            <Bi pick={(x) => x.disclaimer} l={l} lang={lang} />
           </p>
+        </div>
+        {!example && buildChart(medicines).rows.length > 0 && (
+          <div className="card-qr">
+            <CardQR card={{ medicines, lang, patient }} className="card-qr-code" />
+            <Bi pick={(x) => x.listen} l={l} lang={lang} className="card-qr-label" />
+          </div>
         )}
-        <p className="card-small">
-          <Bi pick={(x) => x.disclaimer} l={l} lang={lang} />
-        </p>
       </footer>
       {example && <p className="card-example-tag">Your card appears here</p>}
     </article>

@@ -83,6 +83,17 @@ Source: `scope.md > The POC Boundary`.
 - [ ] Right-to-left scripts (Urdu, Arabic) read correctly.
 - [ ] Short notes the family member typed are shown as typed. No automatic translation of free text in this version.
 
+### Talking card and sharing (added at final review; learner said "yes")
+Source: `scope.md > The Unique Kernel`.
+- As a grandparent who can't read well, I want to scan the card and hear what to take.
+  - [ ] The printed card has a QR code labelled, in both languages, "Scan with a phone to hear this card".
+  - [ ] Scanning it opens a page with one large button per time of day (the current time stands out), listing that time's medicines.
+  - [ ] Tapping a time reads it aloud in the card's language, e.g. "सुबह। Metformin 500 mg, 2 गोलियाँ, खाने के बाद।". "Play all" reads the whole day.
+  - [ ] If the phone has no voice for that language, it says so and reads in English.
+- As a family member, I want to send the card to relatives on WhatsApp.
+  - [ ] "Share on WhatsApp" opens WhatsApp with a message and the talking-card link; "Copy link" copies it.
+  - [ ] The card travels inside the link (after "#"), so it is never stored on or sent to Dose Card's server.
+
 ## States and Boundaries
 - **First visit:** no medicines yet. The preview shows a faint example card with a "Your card appears here" label, and the start buttons are prominent.
 - **Reading:** a calm progress message. The page stays usable, and the family member can start typing instead.
@@ -114,11 +125,9 @@ Source: `scope.md > The POC Boundary`.
 ## Deferred From the POC
 - **Translating free-text notes:** needs another AI call and a review step. Notes are shown as typed.
 - **Reminders and alarms:** needs notifications and scheduling; the card itself is the proof.
-- **WhatsApp or link sharing:** the PDF can be shared by hand for now.
 - **Several family members' cards:** needs saved profiles.
 
 ## Possible Later Enhancements
-- Read-aloud of the card for low-vision users.
 - A card entirely in one language.
 - Larger-print and high-contrast variants.
 - More languages.

@@ -66,7 +66,8 @@ export function Hero() {
         </h1>
         <p className="hero-sub">
           Photograph the doctor&apos;s note, check what Dose Card read, and print a big picture timetable in English and her
-          own language. It&apos;s free, with no sign-up, and nothing is stored on a server.
+          own language. If she can&apos;t read it, she scans the code on the card and her phone reads it to her. It&apos;s free,
+          with no sign-up, and nothing is stored on a server.
         </p>
         <div className="hero-ctas">
           <a href="#make" className="btn">
@@ -168,7 +169,8 @@ export function HowItWorks() {
           <h3>Print it and stick it up</h3>
           <p>
             Pick your grandparent&apos;s language and print one A4 page: medicines down the side, times across, with a picture
-            for every dose. Reprint when the doctor changes something.
+            for every dose. Its QR code opens a talking version: tap Morning or Night and the phone says what to take. Share
+            it with family on WhatsApp.
           </p>
         </li>
       </ol>
@@ -214,8 +216,8 @@ export function Safety() {
         <li>Only medicines written on the paper go on the card. Dose Card never adds, removes or suggests a medicine or dose.</li>
         <li>Anything unclear is marked for you to check, and every card says to confirm with your doctor or pharmacist.</li>
         <li>
-          The photo is sent once to Google&apos;s Gemini to be read, and isn&apos;t kept. Your list stays in this browser. There are
-          no accounts.
+          The photo is sent once to Google&apos;s Gemini to be read, and isn&apos;t kept. Your list stays in this browser, and the QR
+          code and shared links carry the card inside the link itself. There are no accounts.
         </li>
       </ul>
     </section>

@@ -87,6 +87,12 @@ Build mode: fast (the learner asked for the fewest rounds; hands-on checks are s
   - an Evidence page. 17 fictional prescriptions were read once by the live reader: 72/72 medicines found, 287/288 details right, 0 made up. One miss (a 4 PM dose put under Evening) wasn't flagged. One answer-key error (सुबह-शाम) was found and corrected openly.
 
   `lib/eval.ts` is tested (28 tests in total). Both pages were checked at phone width with no sideways scroll.
+- [x] Feedback: "i want 10 rating". The learner approved ("yes") adding a talking card and WhatsApp sharing:
+  - A QR code on the card opens `/listen`, which has big time buttons and reads aloud in the card's language with the phone's voice, falling back to English.
+  - Share on WhatsApp and Copy link.
+  - The card lives only in the link's `#` fragment.
+
+  `lib/share.ts` and `lib/speech.ts` are tested (36 tests in total). Checked in Chrome: QR → /listen → Hindi voice speaks, the current time is highlighted, and the print with the QR still fits one A4 page (250 mm at 82%).
 - [ ] Final review complete — feedback resolved and learner confirms ready to ship
 
 ## Code Tour and App Map

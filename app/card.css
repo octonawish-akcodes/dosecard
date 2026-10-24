@@ -53,9 +53,15 @@
   border-top: 1.5px solid var(--line);
   padding-top: 3mm;
   display: flex;
-  flex-direction: column;
-  gap: 1.5mm;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5mm;
 }
+.card-foot-text { display: flex; flex-direction: column; gap: 1.5mm; }
+.card-qr { display: flex; align-items: center; gap: 3mm; flex-shrink: 0; max-width: 62mm; }
+.card-qr-code { display: block; width: 26mm; height: 26mm; flex-shrink: 0; }
+.card-qr-code svg { width: 100%; height: 100%; }
+.card-qr-label { font-size: 10pt; font-weight: 700; }
 .card-call { font-size: 15pt; display: flex; align-items: center; gap: 3mm; flex-wrap: wrap; }
 .card-call strong { font-size: 18pt; }
 .card-small { font-size: 9.5pt; color: var(--muted); }
@@ -129,6 +135,8 @@
   .dose-icon { width: 5.5mm; height: 5.5mm; }
   .card-example-tag { font-size: 1rem; padding: 0.4rem 0.9rem; }
   .key-item { font-size: 8.5pt; }
+  .card-foot { flex-direction: column; }
+  .card-qr-code { width: 22mm; height: 22mm; }
   .key-title { font-size: 9pt; }
 }
 

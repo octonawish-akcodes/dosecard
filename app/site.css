@@ -158,3 +158,39 @@
 .proof-thumbs li:nth-child(odd) { transform: rotate(-2deg); }
 .proof-thumbs li:nth-child(even) { transform: rotate(2deg) translateY(0.8rem); }
 .proof-thumbs img { width: 100%; height: auto; border: 4px solid #fff; border-radius: 0.3rem; box-shadow: 0 10px 24px -14px rgb(19 38 31 / 0.5); }
+
+/* The talking card, opened from the QR code on a phone. Built for a grandparent: very large, few words. */
+.listen-page { max-width: 40rem; margin: 0 auto; padding: 1rem 1rem 3rem; }
+.listen-brand { font-size: 1.1rem; color: var(--muted); }
+.listen-head { margin-top: 1rem; }
+.listen-title { display: flex; flex-direction: column; font-family: var(--font-display); font-stretch: 85%; font-weight: 800; font-size: 2rem; line-height: 1.1; }
+.listen-patient { font-size: 1.1rem; color: var(--muted); }
+.listen-en { font-family: var(--font-body); font-size: 0.55em; font-weight: 700; color: var(--muted); }
+.listen-hint { margin-top: 0.6rem; font-size: 1.2rem; font-weight: 700; }
+.listen-warn { margin-top: 1rem; padding: 0.8rem 1rem; border-radius: 0.6rem; background: #fff4d6; font-weight: 700; }
+.listen-times { margin-top: 1.25rem; display: grid; gap: 1rem; list-style: none; padding: 0; }
+.listen-btn { width: 100%; display: flex; align-items: center; gap: 1rem; padding: 1rem 1.1rem; border-radius: 1rem; border: 3px solid transparent; text-align: left; color: var(--ink); }
+.listen-btn.band-morning { background: var(--morning); }
+.listen-btn.band-afternoon { background: var(--afternoon); }
+.listen-btn.band-evening { background: var(--evening); }
+.listen-btn.band-night { background: var(--night); color: #fff; }
+.listen-btn.band-night .listen-en { color: #dfe4f5; }
+.listen-btn.band-needed { background: var(--needed); }
+.listen-now { border-color: var(--ink); box-shadow: 0 0 0 4px var(--highlight); }
+.listen-on { border-color: var(--pen); }
+.listen-icon { width: 3.6rem; height: 3.6rem; flex-shrink: 0; }
+.listen-time { display: flex; flex-direction: column; flex: 1; font-size: 1.8rem; font-weight: 800; line-height: 1.1; }
+.listen-play { display: grid; place-items: center; width: 3.2rem; height: 3.2rem; border-radius: 999px; background: #fff; color: var(--ink); font-size: 1.2rem; flex-shrink: 0; }
+.listen-meds { list-style: none; padding: 0.6rem 0.4rem 0; margin: 0; display: grid; gap: 0.6rem; }
+.listen-meds li { display: flex; flex-direction: column; gap: 0.25rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--line); }
+.listen-med { font-size: 1.45rem; font-weight: 700; }
+.listen-dose { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; font-size: 1.15rem; }
+.listen-dose .dose-icon { width: 2rem; height: 2rem; }
+.listen-dose .food-tag { margin-top: 0; font-size: 0.95rem; }
+.listen-all { width: 100%; margin-top: 1.5rem; font-size: 1.3rem; padding: 1rem; gap: 0.6rem; }
+.listen-en-inline { font-size: 0.8em; opacity: 0.85; }
+.listen-card { margin-top: 2rem; }
+.listen-card summary { cursor: pointer; font-weight: 700; color: var(--pen); margin-bottom: 1rem; }
+.listen-privacy { margin-top: 1.5rem; font-size: 0.9rem; color: var(--muted); }
+.listen-empty { margin-top: 3rem; }
+.listen-empty p { margin-top: 1rem; font-size: 1.15rem; }
