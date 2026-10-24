@@ -39,7 +39,7 @@ Build mode: fast (the learner asked for the fewest rounds; hands-on checks are s
   Learner check: Press "Try a sample prescription", compare every row with the sample image, fix one field, and watch the card update.
   Commit: `Read a prescription photo into the medicine list`
 
-- [ ] **3. The card speaks the grandparent's language and prints**
+- [x] **3. The card speaks the grandparent's language and prints**
   Becomes usable: Pick any of the 16 languages and the card shows bilingual labels in the right script (Urdu/Arabic right to left). Add a name and an "If unsure, call" phone number. Print gives a one-page A4 card, and the list survives a refresh.
   Why now: Bilingual labels are part of the kernel, but they sit on top of a working card; printing and persistence finish the core journey.
   PRD ref: `prd.md > Languages`, `prd.md > The card` (header, footer, print), `prd.md > States and Boundaries` (closing and coming back)
@@ -93,4 +93,6 @@ Reflection:
 Activity mode:
 
 ## Revisions
+- Noto Sans Devanagari loads with `weight: "variable"`. The static 400/700 weights fail the Turbopack build ("next/font/google queries have exactly one entry"); the other scripts use static weights.
+- Saving waits until the saved list has been restored. In development React runs effects twice, and the empty first render was overwriting the saved list.
 - Card design changed from picture tiles in time-of-day bands to a tick chart (medicines down the side, times across). At the first hands-on check the learner said the design "looks very complex" and asked for easy options. They chose the tick chart from four rendered designs. `buildCard` was replaced by `buildChart`; PRD > The card and spec > Card preview were updated.

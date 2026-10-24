@@ -15,7 +15,8 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-body), "Noto Sans", system-ui, sans-serif;
+  --font-sans: var(--font-body), var(--font-deva), var(--font-beng), var(--font-telu), var(--font-taml), var(--font-gujr),
+    var(--font-knda), var(--font-mlym), var(--font-guru), var(--font-arab), var(--font-hans), system-ui, sans-serif;
   --font-display: var(--font-display), Georgia, serif;
   --color-paper: var(--paper);
   --color-ink: var(--ink);
