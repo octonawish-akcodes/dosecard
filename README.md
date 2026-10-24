@@ -13,6 +13,15 @@ Built for Devpost's **Build With AI: Basics** hackathon with the [Devpost Learn 
 
 It never gives medical advice. It only copies the prescription, and the family member confirms every row.
 
+## Evidence
+
+On 17 fictional test prescriptions (13 in different handwriting styles plus a typed discharge summary, and 3 hard cases: an elaborate script, a very blurry photo and instructions in Hindi), the reader:
+- found **72 of 72** medicines;
+- read **287 of 288** details right (amount, unit, when, food);
+- **made up none**.
+
+See [the Evidence page](https://dosecard.vercel.app/evidence). The test prescriptions are computer-drawn and cleaner than real handwriting, so they're a best case. Re-run with `pnpm render-evals && pnpm eval`; cached readings are in `evals/raw/`.
+
 ## Run it
 
 Needs Node 22+ and pnpm.

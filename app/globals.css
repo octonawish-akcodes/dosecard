@@ -1,17 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #fbf7f0;
-  --ink: #1f2328;
-  --muted: #5b6470;
-  --line: #e4dccf;
+  /* Chemist's shop and prescription pad: mint page, white paper, green cross, ballpoint blue, highlighter. */
+  --page: #eef4f0;
+  --paper: #ffffff;
+  --ink: #13261f;
+  --muted: #4d5f57;
+  --line: #d5e2db;
+  --green: #0e7a4b;
+  --green-deep: #0a5c38;
+  --pen: #1d3f8f;
+  --highlight: #ffe45c;
   --morning: #fce3cf;
   --afternoon: #fff1b8;
   --evening: #f9d0c4;
   --night: #2e3a6b;
   --needed: #e6eef2;
-  --accent: #b4532a;
-  --panel: #fffdf9;
+  --accent: #0e7a4b;
+  --check: #b3261e;
+  --panel: #ffffff;
 }
 
 @theme inline {
@@ -26,9 +33,12 @@
 }
 
 html {
-  background: var(--paper);
+  background: var(--page);
   color: var(--ink);
+  scroll-behavior: smooth;
 }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+:focus-visible { outline: 3px solid var(--pen); outline-offset: 2px; }
 
 body {
   font-family: var(--font-sans);
@@ -60,7 +70,7 @@ body {
 }
 .field-unsure,
 .chips-unsure {
-  outline: 2px dashed var(--accent);
+  outline: 2px dashed var(--check);
   outline-offset: 2px;
   border-radius: 0.6rem;
 }
@@ -69,7 +79,7 @@ body {
   font-size: 0.7rem;
   font-weight: 700;
   color: #fff;
-  background: var(--accent);
+  background: var(--check);
   border-radius: 999px;
   padding: 0.05rem 0.5rem;
 }
@@ -104,7 +114,7 @@ body {
   margin-top: 0.4rem;
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--check);
 }
 
 .icon-btn {
@@ -132,7 +142,7 @@ body {
   color: #fff;
   border: 2px solid var(--accent);
 }
-.btn:hover { background: #9c4522; }
+.btn:hover { background: var(--green-deep); border-color: var(--green-deep); }
 .btn:disabled { opacity: 0.55; }
 
 .btn-ghost {
@@ -153,10 +163,10 @@ body {
   color: var(--ink);
   border: 2px solid var(--ink);
 }
-.btn-quiet:hover { background: var(--paper); }
+.btn-quiet:hover { background: var(--page); }
 
 .status { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--ink); }
-.status-problem { color: var(--accent); }
+.status-problem { color: var(--check); }
 .saved-tag {
   font-size: 0.75rem;
   font-weight: 700;
@@ -177,3 +187,18 @@ body {
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .spinner { animation: none; } }
+
+.field-name { font-size: 1.15rem; font-weight: 700; }
+.med-row-unsure { border-color: color-mix(in srgb, var(--check) 45%, var(--line)); }
+
+.stepper { display: inline-flex; align-items: center; border: 1.5px solid var(--line); border-radius: 0.7rem; background: #fff; }
+.stepper button { width: 2.6rem; height: 2.6rem; font-size: 1.4rem; font-weight: 700; color: var(--ink); }
+.stepper button:disabled { color: var(--line); }
+.stepper output { min-width: 7.5rem; text-align: center; font-weight: 700; font-size: 1.05rem; }
+
+.segmented { display: inline-flex; flex-wrap: wrap; border: 1.5px solid var(--line); border-radius: 0.7rem; overflow: hidden; background: #fff; }
+.segmented button { padding: 0.45rem 0.8rem; font-size: 0.9rem; font-weight: 700; color: var(--muted); border-right: 1.5px solid var(--line); }
+.segmented button:last-child { border-right: 0; }
+.segmented button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+
+.link-btn { font-size: 0.9rem; font-weight: 700; color: var(--pen); text-decoration: underline; text-underline-offset: 3px; }

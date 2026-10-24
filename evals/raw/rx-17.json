@@ -1,0 +1,57 @@
+{
+ "model": "gemini-3-flash-preview",
+ "readAt": "2026-10-24T16:15:31.621Z",
+ "medicines": [
+  {
+   "id": "vglns2rv",
+   "name": "Tab. Glycomet GP 1",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning",
+    "evening"
+   ],
+   "food": "after",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "yp3ybhh6",
+   "name": "Tab. Telma 40",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning"
+   ],
+   "food": "before",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "a639355k",
+   "name": "Tab. Atorva 10",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "night"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "8imt7fng",
+   "name": "Syp. Digene 10 ml",
+   "amount": 10,
+   "unit": "ml",
+   "times": [
+    "morning",
+    "afternoon",
+    "night"
+   ],
+   "food": "after",
+   "note": "",
+   "unsure": {}
+  }
+ ]
+}

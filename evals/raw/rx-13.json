@@ -1,0 +1,45 @@
+{
+ "model": "gemini-3-flash-preview",
+ "readAt": "2026-10-24T16:13:44.228Z",
+ "medicines": [
+  {
+   "id": "1irywbuv",
+   "name": "Tab. Nitrofurantoin 100",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning",
+    "night"
+   ],
+   "food": "after",
+   "note": "x 5 days",
+   "unsure": {}
+  },
+  {
+   "id": "o0yw8t2c",
+   "name": "Tab. Cranberry extract",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "6hodl2sj",
+   "name": "Syp. Alkasol",
+   "amount": 10,
+   "unit": "ml",
+   "times": [
+    "morning",
+    "afternoon",
+    "night"
+   ],
+   "food": "any",
+   "note": "with water",
+   "unsure": {}
+  }
+ ]
+}

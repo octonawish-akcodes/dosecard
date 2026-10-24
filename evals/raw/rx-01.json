@@ -1,0 +1,91 @@
+{
+ "model": "gemini-3-flash-preview",
+ "readAt": "2026-10-24T16:11:26.686Z",
+ "medicines": [
+  {
+   "id": "6w7a1udb",
+   "name": "Tab. Metformin 500 mg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning",
+    "night"
+   ],
+   "food": "after",
+   "note": "for 1 month",
+   "unsure": {}
+  },
+  {
+   "id": "zyzvgqmv",
+   "name": "Tab. Amlodipine 5 mg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning"
+   ],
+   "food": "any",
+   "note": "for 1 month",
+   "unsure": {}
+  },
+  {
+   "id": "e6pbzqyr",
+   "name": "Tab. Pantoprazole 40 mg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning"
+   ],
+   "food": "before",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "o58lfq2k",
+   "name": "Tab. Atorvastatin 10 mg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "night"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "2tfvd3lf",
+   "name": "Syp. Cremaffin",
+   "amount": 10,
+   "unit": "ml",
+   "times": [
+    "night"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "v09fv20d",
+   "name": "Tab. Paracetamol 650 mg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "needed"
+   ],
+   "food": "any",
+   "note": "for pain / fever",
+   "unsure": {}
+  },
+  {
+   "id": "2i5cmoxe",
+   "name": "Cap. Vitamin D3 60K",
+   "amount": 1,
+   "unit": "capsule",
+   "times": [
+    "morning"
+   ],
+   "food": "any",
+   "note": "once a week (Sunday) x 8 wks",
+   "unsure": {}
+  }
+ ]
+}

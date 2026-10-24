@@ -1,0 +1,66 @@
+{
+ "model": "gemini-3-flash-preview",
+ "readAt": "2026-10-24T16:13:27.498Z",
+ "medicines": [
+  {
+   "id": "lvvh8d4f",
+   "name": "Tab Losartan 50mg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "5or0kqjp",
+   "name": "Tab Hydrochlorothiazide 12.5mg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "2ntyl6v0",
+   "name": "Tab Atorvastatin 20mg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "night"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "7j40ui2p",
+   "name": "Tab Alendronate 70mg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning"
+   ],
+   "food": "before",
+   "note": "once a week (Monday)",
+   "unsure": {}
+  },
+  {
+   "id": "6xc5vilt",
+   "name": "Cap Calcitriol 0.25mcg",
+   "amount": 1,
+   "unit": "capsule",
+   "times": [
+    "afternoon"
+   ],
+   "food": "after",
+   "note": "",
+   "unsure": {}
+  }
+ ]
+}

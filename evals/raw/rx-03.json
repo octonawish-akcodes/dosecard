@@ -1,0 +1,56 @@
+{
+ "model": "gemini-3.5-flash",
+ "readAt": "2026-10-24T16:11:53.912Z",
+ "medicines": [
+  {
+   "id": "e3q6dd7l",
+   "name": "Tab. Azithromycin 500 mg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning"
+   ],
+   "food": "any",
+   "note": "x 3 days",
+   "unsure": {}
+  },
+  {
+   "id": "1yrhauhl",
+   "name": "Syp. Ascoril LS",
+   "amount": 5,
+   "unit": "ml",
+   "times": [
+    "morning",
+    "afternoon",
+    "night"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "ze6tkri2",
+   "name": "Tab. Montelukast-Levocetirizine",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "night"
+   ],
+   "food": "any",
+   "note": "x 5 days",
+   "unsure": {}
+  },
+  {
+   "id": "um7ybyeq",
+   "name": "Tab. Pan-D",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning"
+   ],
+   "food": "before",
+   "note": "before breakfast",
+   "unsure": {}
+  }
+ ]
+}

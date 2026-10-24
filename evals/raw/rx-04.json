@@ -1,0 +1,68 @@
+{
+ "model": "gemini-3.5-flash",
+ "readAt": "2026-10-24T16:12:05.380Z",
+ "medicines": [
+  {
+   "id": "x95b13tr",
+   "name": "TAB. FUROSEMIDE 40 MG",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning",
+    "evening"
+   ],
+   "food": "any",
+   "note": "8 AM, 4 PM",
+   "unsure": {}
+  },
+  {
+   "id": "44sqorpw",
+   "name": "TAB. SPIRONOLACTONE 25 MG",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "yg91ygaa",
+   "name": "TAB. TELMISARTAN 40 MG",
+   "amount": 0.5,
+   "unit": "tablet",
+   "times": [
+    "morning"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "0b7er7qk",
+   "name": "TAB. CARVEDILOL 6.25 MG",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning",
+    "night"
+   ],
+   "food": "after",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "h2umurp8",
+   "name": "TAB. FEBUXOSTAT 40 MG",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "night"
+   ],
+   "food": "after",
+   "note": "",
+   "unsure": {}
+  }
+ ]
+}

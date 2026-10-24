@@ -1,0 +1,59 @@
+{
+ "model": "gemini-3.5-flash",
+ "readAt": "2026-10-24T16:12:44.509Z",
+ "medicines": [
+  {
+   "id": "v2zsxnxk",
+   "name": "Tab. Etoricoxib 60 mg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning"
+   ],
+   "food": "after",
+   "note": "x 10 days",
+   "unsure": {}
+  },
+  {
+   "id": "lv1y819a",
+   "name": "Tab. Rabeprazole 20",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning"
+   ],
+   "food": "before",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "sg4sdarj",
+   "name": "Cap. Glucosamine + Chondroitin",
+   "amount": 1,
+   "unit": "capsule",
+   "times": [
+    "morning",
+    "night"
+   ],
+   "food": "any",
+   "note": "x 3 months",
+   "unsure": {}
+  },
+  {
+   "id": "3ya3zncb",
+   "name": "Diclofenac gel",
+   "amount": 1,
+   "unit": "other",
+   "times": [
+    "morning",
+    "afternoon",
+    "night"
+   ],
+   "food": "any",
+   "note": "local application",
+   "unsure": {
+    "amount": true
+   }
+  }
+ ]
+}

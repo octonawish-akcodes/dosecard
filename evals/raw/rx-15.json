@@ -1,0 +1,55 @@
+{
+ "model": "gemini-3-flash-preview",
+ "readAt": "2026-10-24T16:15:16.469Z",
+ "medicines": [
+  {
+   "id": "m91ndawz",
+   "name": "Tab. Apixaban 2.5 mg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning",
+    "night"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "7aa1ly9m",
+   "name": "Tab. Digoxin 0.25",
+   "amount": 0.5,
+   "unit": "tablet",
+   "times": [
+    "morning"
+   ],
+   "food": "any",
+   "note": "½ tab",
+   "unsure": {}
+  },
+  {
+   "id": "bxi5626u",
+   "name": "Tab. Bisoprolol 2.5",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning"
+   ],
+   "food": "any",
+   "note": "morning",
+   "unsure": {}
+  },
+  {
+   "id": "z7bf8ge6",
+   "name": "Tab. Pantocid 40",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning"
+   ],
+   "food": "before",
+   "note": "before breakfast",
+   "unsure": {}
+  }
+ ]
+}

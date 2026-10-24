@@ -1,0 +1,59 @@
+{
+ "model": "gemini-3-flash-preview",
+ "readAt": "2026-10-24T16:13:50.492Z",
+ "medicines": [
+  {
+   "id": "wm9jstd6",
+   "name": "Tab. Omeprazole 20",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning",
+    "night"
+   ],
+   "food": "before",
+   "note": "1/2 hr before meals",
+   "unsure": {}
+  },
+  {
+   "id": "5mocjb0u",
+   "name": "Syp. Sucralfate 10 ml",
+   "amount": 10,
+   "unit": "ml",
+   "times": [
+    "morning",
+    "afternoon",
+    "night"
+   ],
+   "food": "before",
+   "note": "before food",
+   "unsure": {}
+  },
+  {
+   "id": "yvrlxmbr",
+   "name": "Tab. Domperidone 10",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning",
+    "afternoon",
+    "night"
+   ],
+   "food": "before",
+   "note": "AC",
+   "unsure": {}
+  },
+  {
+   "id": "2ji8w6ku",
+   "name": "Cap. Becosules",
+   "amount": 1,
+   "unit": "capsule",
+   "times": [
+    "afternoon"
+   ],
+   "food": "after",
+   "note": "after lunch",
+   "unsure": {}
+  }
+ ]
+}

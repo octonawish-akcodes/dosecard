@@ -1,0 +1,56 @@
+{
+ "model": "gemini-3.5-flash",
+ "readAt": "2026-10-24T16:12:13.064Z",
+ "medicines": [
+  {
+   "id": "c8lm18km",
+   "name": "Foracort 200 Rotacaps",
+   "amount": 1,
+   "unit": "puff",
+   "times": [
+    "morning",
+    "night"
+   ],
+   "food": "any",
+   "note": "rinse mouth",
+   "unsure": {}
+  },
+  {
+   "id": "90zsogue",
+   "name": "Asthalin inhaler",
+   "amount": 2,
+   "unit": "puff",
+   "times": [
+    "needed"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "0ycds0jb",
+   "name": "Tab. Doxofylline 400",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "night"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "uxdy9tcp",
+   "name": "Tab. Deriphyllin retard 150",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning",
+    "night"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  }
+ ]
+}

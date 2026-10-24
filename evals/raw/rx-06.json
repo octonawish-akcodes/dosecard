@@ -1,0 +1,64 @@
+{
+ "model": "gemini-3.5-flash",
+ "readAt": "2026-10-24T16:12:22.274Z",
+ "medicines": [
+  {
+   "id": "kwr9zcrc",
+   "name": "Moxifloxacin eye drops",
+   "amount": 1,
+   "unit": "drops",
+   "times": [
+    "morning",
+    "afternoon",
+    "evening",
+    "night"
+   ],
+   "food": "any",
+   "note": "x 1 week",
+   "unsure": {}
+  },
+  {
+   "id": "28900v03",
+   "name": "Prednisolone acetate eye drops",
+   "amount": 1,
+   "unit": "drops",
+   "times": [
+    "morning",
+    "afternoon",
+    "evening",
+    "night"
+   ],
+   "food": "any",
+   "note": "6 times a day x 1 week, then QID",
+   "unsure": {
+    "times": true
+   }
+  },
+  {
+   "id": "e20pj4vm",
+   "name": "Lubricant eye drops",
+   "amount": 2,
+   "unit": "drops",
+   "times": [
+    "morning",
+    "afternoon",
+    "night"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "cnm77xwz",
+   "name": "Tab. Paracetamol 500",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "needed"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  }
+ ]
+}

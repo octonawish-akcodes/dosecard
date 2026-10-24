@@ -158,6 +158,14 @@ Carried from `prd.md > Look and Feel`.
 - Implements `prd.md > States and Boundaries` ("Closing and coming back").
 - `load()` and `save(state)` against `localStorage` key `dosecard:v1`, wrapped in try/catch. If storage is unavailable the app still works, but nothing is remembered.
 
+### Website and evidence (added at final review)
+Implements the site described in `prd.md > Screens and Layout`.
+- **`components/Site.tsx`:** header, hero, sourced facts, how it works, proof and safety. `app/site.css` holds the chemist's-shop palette (mint page, white paper, chemist green, ballpoint blue, highlighter) and Archivo, narrowed for headlines.
+- **`app/evidence/page.tsx`:** renders `public/evidence/results.json`.
+- **`evals/prescriptions.json`:** 17 fictional prescriptions with answers.
+- **`scripts/render-evals.mjs`:** draws them as photo-like JPGs.
+- **`scripts/eval.mts`:** runs them through `readWithModel()` and scores them with `lib/eval.ts`. Raw readings are cached in `evals/raw/`.
+
 ## Data Model
 ```ts
 type Time = "morning" | "afternoon" | "evening" | "night" | "needed";

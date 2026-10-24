@@ -69,9 +69,15 @@ export async function tryInTurn<T>(ids: string[], call: (id: string) => Promise<
 
 /** Sends one image to Gemini and returns validated rows. Never logs the image or the result. */
 export async function readPrescription(image: Uint8Array, mediaType: string, apiKey: string): Promise<Medicine[]> {
+  return (await readWithModel(image, mediaType, apiKey)).medicines;
+}
+
+/** Same as readPrescription, also saying which model answered (the evaluation records it). */
+export async function readWithModel(image: Uint8Array, mediaType: string, apiKey: string): Promise<{ medicines: Medicine[]; model: string }> {
   const google = createGoogleGenerativeAI({ apiKey });
-  const r = await tryInTurn(MODELS, (id) =>
-    generateText({
+  const r = await tryInTurn(MODELS, async (id) => ({
+    model: id,
+    result: await generateText({
       model: google(id),
       maxRetries: 0,
       abortSignal: AbortSignal.timeout(30_000),
@@ -81,11 +87,11 @@ export async function readPrescription(image: Uint8Array, mediaType: string, api
           role: "user",
           content: [
             { type: "text", text: PROMPT },
-            { type: "image", image, mediaType },
+            { type: "file", data: image, mediaType },
           ],
         },
       ],
     }),
-  );
-  return toMedicines(ReadResult.parse(r.output));
+  }));
+  return { medicines: toMedicines(ReadResult.parse(r.result.output)), model: r.model };
 }

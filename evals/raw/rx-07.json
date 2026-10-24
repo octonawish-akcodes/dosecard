@@ -1,0 +1,54 @@
+{
+ "model": "gemini-3-flash-preview",
+ "readAt": "2026-10-24T16:12:35.779Z",
+ "medicines": [
+  {
+   "id": "xv9znubt",
+   "name": "Tab. Glimepiride 1 mg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning"
+   ],
+   "food": "before",
+   "note": "15 min before breakfast",
+   "unsure": {}
+  },
+  {
+   "id": "iswpgmmb",
+   "name": "Tab. Metformin SR 1000",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "night"
+   ],
+   "food": "with",
+   "note": "with dinner",
+   "unsure": {}
+  },
+  {
+   "id": "98kdt1py",
+   "name": "Tab. Sitagliptin 50",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "nohzqmbv",
+   "name": "Tab. Shelcal 500",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "afternoon"
+   ],
+   "food": "after",
+   "note": "after lunch",
+   "unsure": {}
+  }
+ ]
+}

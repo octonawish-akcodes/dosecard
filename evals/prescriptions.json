@@ -1,0 +1,966 @@
+{
+ "note": "Fictional prescriptions written for this test. Clinic, doctor and patient names are invented. Each line is what is written on the paper; 'truth' is what a careful pharmacist would read. 'ignore' lists lines that aren't tablets/syrups etc. (steam, gel, fluids): reading them or not counts neither way.",
+ "prescriptions": [
+  {
+   "id": "rx-01",
+   "style": "hand-bradley",
+   "clinic": "Sunrise Family Clinic",
+   "patient": "Kamla Devi, 72 F",
+   "notes": "c/o giddiness, acidity · BP 146/88 · k/c/o T2DM, HTN",
+   "lines": [
+    "Tab. Metformin 500 mg  1 — 0 — 1  PC  × 1 month",
+    "Tab. Amlodipine 5 mg  1 — 0 — 0  × 1 month",
+    "Tab. Pantoprazole 40 mg  OD  AC (empty stomach)",
+    "Tab. Atorvastatin 10 mg  0 — 0 — 1  HS",
+    "Syp. Cremaffin 10 ml  HS",
+    "Tab. Paracetamol 650 mg  SOS for pain / fever",
+    "Cap. Vitamin D3 60K  once a week (Sunday) × 8 wks"
+   ],
+   "truth": [
+    {
+     "key": "metformin",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "night"
+     ],
+     "food": "after"
+    },
+    {
+     "key": "amlodipine",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "pantoprazole",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "before"
+    },
+    {
+     "key": "atorvastatin",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "night"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "cremaffin",
+     "amount": 10,
+     "unit": "ml",
+     "times": [
+      "night"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "paracetamol",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "needed"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "vitamin d3",
+     "amount": 1,
+     "unit": "capsule",
+     "times": [
+      "morning"
+     ],
+     "food": "any"
+    }
+   ]
+  },
+  {
+   "id": "rx-02",
+   "style": "hand-noteworthy",
+   "clinic": "Lakeview Medical Centre",
+   "patient": "Ramesh Kumar, 68 M",
+   "notes": "Post-MI follow up. ECG — NSR.",
+   "lines": [
+    "Tab. Ecosprin 75   0 – 1 – 0   after lunch",
+    "Tab. Clopidogrel 75 mg   0 – 1 – 0   PC",
+    "Tab. Metoprolol XL 25   1 – 0 – 1",
+    "Tab. Rosuvastatin 20   0 – 0 – 1",
+    "Tab. Sorbitrate 5 mg   SOS for chest pain (under tongue)"
+   ],
+   "truth": [
+    {
+     "key": "ecosprin",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "afternoon"
+     ],
+     "food": "after"
+    },
+    {
+     "key": "clopidogrel",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "afternoon"
+     ],
+     "food": "after"
+    },
+    {
+     "key": "metoprolol",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "night"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "rosuvastatin",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "night"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "sorbitrate",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "needed"
+     ],
+     "food": "any"
+    }
+   ]
+  },
+  {
+   "id": "rx-03",
+   "style": "hand-chalk",
+   "clinic": "Shanti Children & Family Clinic",
+   "patient": "Sunita Rao, 66 F",
+   "notes": "URTI, cough × 4 days, afebrile",
+   "lines": [
+    "Tab. Azithromycin 500 mg   OD  × 3 days",
+    "Syp. Ascoril LS   5 ml TDS",
+    "Tab. Montelukast-Levocetirizine   HS  × 5 days",
+    "Tab. Pan-D   OD before breakfast",
+    "Steam inhalation BD"
+   ],
+   "truth": [
+    {
+     "key": "azithromycin",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "ascoril",
+     "amount": 5,
+     "unit": "ml",
+     "times": [
+      "morning",
+      "afternoon",
+      "night"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "montelukast",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "night"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "pan-d",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "before"
+    }
+   ],
+   "ignore": [
+    "steam"
+   ]
+  },
+  {
+   "id": "rx-04",
+   "style": "typed",
+   "clinic": "City General Hospital — Discharge Summary",
+   "patient": "Abdul Rahman, 74 M",
+   "notes": "Diagnosis: Congestive heart failure, CKD stage 3. Discharge medications:",
+   "lines": [
+    "1. TAB. FUROSEMIDE 40 MG — 1 TAB BD (8 AM, 4 PM)",
+    "2. TAB. SPIRONOLACTONE 25 MG — 1 TAB OD (MORNING)",
+    "3. TAB. TELMISARTAN 40 MG — ½ TAB OD",
+    "4. TAB. CARVEDILOL 6.25 MG — 1 TAB BD AFTER FOOD",
+    "5. TAB. FEBUXOSTAT 40 MG — 1 TAB OD AFTER DINNER"
+   ],
+   "truth": [
+    {
+     "key": "furosemide",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "afternoon"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "spironolactone",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "telmisartan",
+     "amount": 0.5,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "carvedilol",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "night"
+     ],
+     "food": "after"
+    },
+    {
+     "key": "febuxostat",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "night"
+     ],
+     "food": "after"
+    }
+   ],
+   "missNote": "The paper says “BD (8 AM, 4 PM)”. Dose Card put the 4 PM dose under Evening; our answer counts 4 PM as Afternoon."
+  },
+  {
+   "id": "rx-05",
+   "style": "hand-marker",
+   "clinic": "Dr. N. Bose's Clinic (fictional)",
+   "patient": "Gopal Das, 79 M",
+   "notes": "COPD, breathlessness on exertion",
+   "lines": [
+    "Foracort 200 Rotacaps — 1 puff BD (rinse mouth)",
+    "Asthalin inhaler — 2 puffs SOS",
+    "Tab. Doxofylline 400   0-0-1",
+    "Tab. Deriphyllin retard 150   1-0-1"
+   ],
+   "truth": [
+    {
+     "key": "foracort",
+     "amount": 1,
+     "unit": "puff",
+     "times": [
+      "morning",
+      "night"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "asthalin",
+     "amount": 2,
+     "unit": "puff",
+     "times": [
+      "needed"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "doxofylline",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "night"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "deriphyllin",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "night"
+     ],
+     "food": "any"
+    }
+   ]
+  },
+  {
+   "id": "rx-06",
+   "style": "hand-bradley",
+   "clinic": "Netra Eye Hospital (fictional)",
+   "patient": "Leela Menon, 70 F",
+   "notes": "Post cataract surgery (R eye) — day 1",
+   "lines": [
+    "Moxifloxacin eye drops — 1 drop QID × 1 week",
+    "Prednisolone acetate eye drops — 1 drop 6 times a day × 1 week, then QID",
+    "Lubricant eye drops — 2 drops TDS",
+    "Tab. Paracetamol 500 SOS"
+   ],
+   "truth": [
+    {
+     "key": "moxifloxacin",
+     "amount": 1,
+     "unit": "drops",
+     "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "prednisolone",
+     "amount": 1,
+     "unit": "drops",
+     "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "lubricant",
+     "amount": 2,
+     "unit": "drops",
+     "times": [
+      "morning",
+      "afternoon",
+      "night"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "paracetamol",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "needed"
+     ],
+     "food": "any"
+    }
+   ]
+  },
+  {
+   "id": "rx-07",
+   "style": "hand-noteworthy",
+   "clinic": "Arogya Diabetes Care (fictional)",
+   "patient": "Meena Shah, 63 F",
+   "notes": "FBS 168, PPBS 242, HbA1c 8.4",
+   "lines": [
+    "Tab. Glimepiride 1 mg   1 — 0 — 0   15 min before breakfast",
+    "Tab. Metformin SR 1000   0 — 0 — 1   with dinner",
+    "Tab. Sitagliptin 50   1 — 0 — 0",
+    "Tab. Shelcal 500   0 — 1 — 0   after lunch"
+   ],
+   "truth": [
+    {
+     "key": "glimepiride",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "before"
+    },
+    {
+     "key": "metformin",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "night"
+     ],
+     "food": "with"
+    },
+    {
+     "key": "sitagliptin",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "shelcal",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "afternoon"
+     ],
+     "food": "after"
+    }
+   ]
+  },
+  {
+   "id": "rx-08",
+   "style": "hand-chalk",
+   "clinic": "Shree Ortho & Spine (fictional)",
+   "patient": "Hari Prasad, 71 M",
+   "notes": "Knee OA, both knees. Advice: quadriceps exercises.",
+   "lines": [
+    "Tab. Etoricoxib 60 mg   OD after food × 10 days",
+    "Tab. Rabeprazole 20   OD AC",
+    "Cap. Glucosamine + Chondroitin   1 BD × 3 months",
+    "Diclofenac gel — local application TDS"
+   ],
+   "truth": [
+    {
+     "key": "etoricoxib",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "after"
+    },
+    {
+     "key": "rabeprazole",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "before"
+    },
+    {
+     "key": "glucosamine",
+     "amount": 1,
+     "unit": "capsule",
+     "times": [
+      "morning",
+      "night"
+     ],
+     "food": "any"
+    }
+   ],
+   "ignore": [
+    "diclofenac"
+   ]
+  },
+  {
+   "id": "rx-09",
+   "style": "hand-marker",
+   "clinic": "Dr. S. Iqbal, Physician (fictional)",
+   "patient": "Fatima Begum, 67 F",
+   "notes": "Hypothyroid, anaemia. Hb 9.8",
+   "lines": [
+    "Tab. Thyronorm 50 mcg   empty stomach, early morning",
+    "Tab. Orofer XT   0 – 1 – 0   after lunch",
+    "Tab. Folvite 5 mg   OD",
+    "ORS — 1 sachet in 1 L water, sip through the day"
+   ],
+   "truth": [
+    {
+     "key": "thyronorm",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "before"
+    },
+    {
+     "key": "orofer",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "afternoon"
+     ],
+     "food": "after"
+    },
+    {
+     "key": "folvite",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "ors",
+     "amount": 1,
+     "unit": "sachet",
+     "times": [
+      "morning"
+     ],
+     "food": "any"
+    }
+   ]
+  },
+  {
+   "id": "rx-10",
+   "style": "hand-bradley",
+   "clinic": "Prakash Neuro Clinic (fictional)",
+   "patient": "Vasant Joshi, 76 M",
+   "notes": "Parkinson's disease. Gait slow.",
+   "lines": [
+    "Tab. Syndopa Plus   ½ – ½ – ½",
+    "Tab. Pramipexole 0.25 mg   1 – 0 – 1",
+    "Tab. Donepezil 5 mg   HS",
+    "Tab. Clonazepam 0.25 mg   ½ tab HS"
+   ],
+   "truth": [
+    {
+     "key": "syndopa",
+     "amount": 0.5,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "afternoon",
+      "night"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "pramipexole",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "night"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "donepezil",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "night"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "clonazepam",
+     "amount": 0.5,
+     "unit": "tablet",
+     "times": [
+      "night"
+     ],
+     "food": "any"
+    }
+   ]
+  },
+  {
+   "id": "rx-11",
+   "style": "typed",
+   "clinic": "Apex Multispeciality — OPD Prescription",
+   "patient": "Kusum Agarwal, 69 F",
+   "notes": "Dx: Hypertension, dyslipidaemia, osteoporosis",
+   "lines": [
+    "Tab Losartan 50mg        1-0-0",
+    "Tab Hydrochlorothiazide 12.5mg   1-0-0",
+    "Tab Atorvastatin 20mg    0-0-1",
+    "Tab Alendronate 70mg     once a week (Monday), empty stomach",
+    "Cap Calcitriol 0.25mcg   0-1-0 after lunch"
+   ],
+   "truth": [
+    {
+     "key": "losartan",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "hydrochlorothiazide",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "atorvastatin",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "night"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "alendronate",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "before"
+    },
+    {
+     "key": "calcitriol",
+     "amount": 1,
+     "unit": "capsule",
+     "times": [
+      "afternoon"
+     ],
+     "food": "after"
+    }
+   ]
+  },
+  {
+   "id": "rx-12",
+   "style": "hand-noteworthy",
+   "clinic": "Gupta Clinic (fictional)",
+   "patient": "Rajinder Singh, 73 M",
+   "notes": "BPH, nocturia ×3",
+   "lines": [
+    "Cap. Tamsulosin 0.4   HS",
+    "Tab. Dutasteride 0.5   OD",
+    "Tab. Tolterodine 2 mg   1-0-1",
+    "Syp. Lactulose 15 ml   HS if constipated"
+   ],
+   "truth": [
+    {
+     "key": "tamsulosin",
+     "amount": 1,
+     "unit": "capsule",
+     "times": [
+      "night"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "dutasteride",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "tolterodine",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "night"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "lactulose",
+     "amount": 15,
+     "unit": "ml",
+     "times": [
+      "night"
+     ],
+     "food": "any"
+    }
+   ]
+  },
+  {
+   "id": "rx-13",
+   "style": "hand-chalk",
+   "clinic": "Sai Krupa Clinic (fictional)",
+   "patient": "Lakshmi Iyer, 81 F",
+   "notes": "Recurrent UTI. Urine C/S sent.",
+   "lines": [
+    "Tab. Nitrofurantoin 100   1 – 0 – 1   after food × 5 days",
+    "Tab. Cranberry extract   OD",
+    "Syp. Alkasol 10 ml   TDS with water",
+    "Plenty of oral fluids"
+   ],
+   "truth": [
+    {
+     "key": "nitrofurantoin",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "night"
+     ],
+     "food": "after"
+    },
+    {
+     "key": "cranberry",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "alkasol",
+     "amount": 10,
+     "unit": "ml",
+     "times": [
+      "morning",
+      "afternoon",
+      "night"
+     ],
+     "food": "any"
+    }
+   ],
+   "ignore": [
+    "fluids"
+   ]
+  },
+  {
+   "id": "rx-14",
+   "style": "hand-marker",
+   "clinic": "Dr. P. Kulkarni (fictional)",
+   "patient": "Shankar Patil, 75 M",
+   "notes": "Gastritis, poor appetite",
+   "lines": [
+    "Tab. Omeprazole 20   1 — 0 — 1   ½ hr before meals",
+    "Syp. Sucralfate 10 ml   TDS before food",
+    "Tab. Domperidone 10   TDS AC",
+    "Cap. Becosules   OD after lunch"
+   ],
+   "truth": [
+    {
+     "key": "omeprazole",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "night"
+     ],
+     "food": "before"
+    },
+    {
+     "key": "sucralfate",
+     "amount": 10,
+     "unit": "ml",
+     "times": [
+      "morning",
+      "afternoon",
+      "night"
+     ],
+     "food": "before"
+    },
+    {
+     "key": "domperidone",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "afternoon",
+      "night"
+     ],
+     "food": "before"
+    },
+    {
+     "key": "becosules",
+     "amount": 1,
+     "unit": "capsule",
+     "times": [
+      "afternoon"
+     ],
+     "food": "after"
+    }
+   ]
+  },
+  {
+   "id": "rx-15",
+   "style": "hand-script",
+   "hard": "Elaborate script handwriting",
+   "clinic": "Dr. A. Fernandes (fictional)",
+   "patient": "Maria D'Souza, 77 F",
+   "notes": "AF, on anticoagulation. INR 2.4",
+   "lines": [
+    "Tab. Apixaban 2.5 mg  1 - 0 - 1",
+    "Tab. Digoxin 0.25  ½ tab OD",
+    "Tab. Bisoprolol 2.5  OD morning",
+    "Tab. Pantocid 40  OD before breakfast"
+   ],
+   "truth": [
+    {
+     "key": "apixaban",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "night"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "digoxin",
+     "amount": 0.5,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "bisoprolol",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "pantocid",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "before"
+    }
+   ]
+  },
+  {
+   "id": "rx-16",
+   "style": "hand-noteworthy",
+   "hard": "Very blurry, low-contrast photo",
+   "blur": 3.4,
+   "contrast": 0.42,
+   "clinic": "Ganga Clinic (fictional)",
+   "patient": "Om Prakash, 82 M",
+   "notes": "Vertigo, HTN",
+   "lines": [
+    "Tab. Betahistine 16 mg  1-1-1  after food",
+    "Tab. Cinnarizine 25  SOS for giddiness",
+    "Tab. Cilnidipine 10  1-0-0",
+    "Tab. Ondansetron 4 mg  SOS vomiting"
+   ],
+   "truth": [
+    {
+     "key": "betahistine",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "afternoon",
+      "night"
+     ],
+     "food": "after"
+    },
+    {
+     "key": "cinnarizine",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "needed"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "cilnidipine",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "ondansetron",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "needed"
+     ],
+     "food": "any"
+    }
+   ]
+  },
+  {
+   "id": "rx-17",
+   "style": "hand-bradley",
+   "hard": "Instructions written in Hindi",
+   "clinic": "Sharma Clinic, Varanasi (fictional)",
+   "patient": "Savitri Devi, 74 F",
+   "notes": "शुगर, बी.पी.",
+   "lines": [
+    "Tab. Glycomet GP 1  सुबह-शाम खाने के बाद",
+    "Tab. Telma 40  सुबह खाली पेट",
+    "Tab. Atorva 10  रात को सोते समय",
+    "Syp. Digene 10 ml  खाने के बाद, दिन में तीन बार"
+   ],
+   "truth": [
+    {
+     "key": "glycomet",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "evening"
+     ],
+     "food": "after"
+    },
+    {
+     "key": "telma",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "before"
+    },
+    {
+     "key": "atorva",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "night"
+     ],
+     "food": "any"
+    },
+    {
+     "key": "digene",
+     "amount": 10,
+     "unit": "ml",
+     "times": [
+      "morning",
+      "afternoon",
+      "night"
+     ],
+     "food": "after"
+    }
+   ],
+   "truthNote": "Corrected after the first run: सुबह-शाम literally means morning and evening, which is what the reader gave; the original answer key said morning and night."
+  }
+ ]
+}

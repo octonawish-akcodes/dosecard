@@ -1,0 +1,57 @@
+{
+ "model": "gemini-3.5-flash",
+ "readAt": "2026-10-24T16:13:08.226Z",
+ "medicines": [
+  {
+   "id": "a9s7bjx0",
+   "name": "Tab. Syndopa Plus",
+   "amount": 0.5,
+   "unit": "tablet",
+   "times": [
+    "morning",
+    "afternoon",
+    "night"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "lt0odges",
+   "name": "Tab. Pramipexole 0.25 mg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning",
+    "night"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "0bz3kdwy",
+   "name": "Tab. Donepezil 5 mg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "night"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "efwcr0ca",
+   "name": "Tab. Clonazepam 0.25 mg",
+   "amount": 0.5,
+   "unit": "tablet",
+   "times": [
+    "night"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  }
+ ]
+}

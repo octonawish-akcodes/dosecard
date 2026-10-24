@@ -1,0 +1,56 @@
+{
+ "model": "gemini-3-flash-preview",
+ "readAt": "2026-10-24T16:13:00.264Z",
+ "medicines": [
+  {
+   "id": "ajfek07j",
+   "name": "Tab. Thyronorm 50 mcg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning"
+   ],
+   "food": "before",
+   "note": "early morning",
+   "unsure": {}
+  },
+  {
+   "id": "y35to5w9",
+   "name": "Tab. Orofer XT",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "afternoon"
+   ],
+   "food": "after",
+   "note": "after lunch",
+   "unsure": {}
+  },
+  {
+   "id": "kyf3qxmq",
+   "name": "Tab. Folvite 5 mg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "mtuoq3bf",
+   "name": "ORS",
+   "amount": 1,
+   "unit": "sachet",
+   "times": [
+    "morning"
+   ],
+   "food": "any",
+   "note": "1 sachet in 1 L water, sip through the day",
+   "unsure": {
+    "times": true
+   }
+  }
+ ]
+}

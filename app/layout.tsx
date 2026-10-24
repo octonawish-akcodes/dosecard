@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import {
+  Archivo,
   Atkinson_Hyperlegible,
-  Fraunces,
   Noto_Naskh_Arabic,
   Noto_Sans_Bengali,
   Noto_Sans_Devanagari,
@@ -15,9 +15,11 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import "./card.css";
+import "./site.css";
 
 const body = Atkinson_Hyperlegible({ subsets: ["latin", "latin-ext"], weight: ["400", "700"], variable: "--font-body" });
-const display = Fraunces({ subsets: ["latin"], weight: ["600"], variable: "--font-display" });
+// Headlines: a heavy, narrowed grotesk, like the print on a medicine strip.
+const display = Archivo({ subsets: ["latin"], weight: "variable", axes: ["wdth"], variable: "--font-display" });
 
 // One Noto font per script on the card. Not preloaded: only the chosen language's glyphs are fetched.
 // next/font needs each call assigned to its own module-level const, with literal options.

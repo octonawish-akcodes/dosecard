@@ -1,0 +1,67 @@
+{
+ "model": "gemini-3-flash-preview",
+ "readAt": "2026-10-24T16:11:35.957Z",
+ "medicines": [
+  {
+   "id": "gp27zagj",
+   "name": "Tab. Ecosprin 75",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "afternoon"
+   ],
+   "food": "after",
+   "note": "after lunch",
+   "unsure": {}
+  },
+  {
+   "id": "dto7qhtr",
+   "name": "Tab. Clopidogrel 75 mg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "afternoon"
+   ],
+   "food": "after",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "bqtzqhq4",
+   "name": "Tab. Metoprolol XL 25",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning",
+    "night"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "erg2iwf2",
+   "name": "Tab. Rosuvastatin 20",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "night"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "gp6vpc1m",
+   "name": "Tab. Sorbitrate 5 mg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "needed"
+   ],
+   "food": "any",
+   "note": "for chest pain (under tongue)",
+   "unsure": {}
+  }
+ ]
+}

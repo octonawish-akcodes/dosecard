@@ -1,0 +1,2156 @@
+{
+ "generatedAt": "2026-10-24T16:15:56.729Z",
+ "models": [
+  "gemini-3-flash-preview",
+  "gemini-3.5-flash"
+ ],
+ "summary": {
+  "prescriptions": 17,
+  "medicines": 72,
+  "found": 72,
+  "fields": 288,
+  "fieldsRight": 287,
+  "perField": {
+   "amount": 72,
+   "unit": 72,
+   "times": 71,
+   "food": 72
+  },
+  "rowsRight": 71,
+  "wrongFields": 1,
+  "wrongFlagged": 0,
+  "extra": 0
+ },
+ "results": [
+  {
+   "id": "rx-01",
+   "style": "hand-bradley",
+   "clinic": "Sunrise Family Clinic",
+   "lines": [
+    "Tab. Metformin 500 mg  1 — 0 — 1  PC  × 1 month",
+    "Tab. Amlodipine 5 mg  1 — 0 — 0  × 1 month",
+    "Tab. Pantoprazole 40 mg  OD  AC (empty stomach)",
+    "Tab. Atorvastatin 10 mg  0 — 0 — 1  HS",
+    "Syp. Cremaffin 10 ml  HS",
+    "Tab. Paracetamol 650 mg  SOS for pain / fever",
+    "Cap. Vitamin D3 60K  once a week (Sunday) × 8 wks"
+   ],
+   "model": "gemini-3-flash-preview",
+   "readAt": "2026-10-24T16:11:26.686Z",
+   "score": {
+    "rows": [
+     {
+      "key": "metformin",
+      "found": true,
+      "read": "Tab. Metformin 500 mg",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "amlodipine",
+      "found": true,
+      "read": "Tab. Amlodipine 5 mg",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "pantoprazole",
+      "found": true,
+      "read": "Tab. Pantoprazole 40 mg",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "atorvastatin",
+      "found": true,
+      "read": "Tab. Atorvastatin 10 mg",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "cremaffin",
+      "found": true,
+      "read": "Syp. Cremaffin",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "paracetamol",
+      "found": true,
+      "read": "Tab. Paracetamol 650 mg",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "vitamin d3",
+      "found": true,
+      "read": "Cap. Vitamin D3 60K",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     }
+    ],
+    "extra": []
+   },
+   "medicines": [
+    {
+     "id": "6w7a1udb",
+     "name": "Tab. Metformin 500 mg",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "night"
+     ],
+     "food": "after",
+     "note": "for 1 month",
+     "unsure": {}
+    },
+    {
+     "id": "zyzvgqmv",
+     "name": "Tab. Amlodipine 5 mg",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "any",
+     "note": "for 1 month",
+     "unsure": {}
+    },
+    {
+     "id": "e6pbzqyr",
+     "name": "Tab. Pantoprazole 40 mg",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "before",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "o58lfq2k",
+     "name": "Tab. Atorvastatin 10 mg",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "night"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "2tfvd3lf",
+     "name": "Syp. Cremaffin",
+     "amount": 10,
+     "unit": "ml",
+     "times": [
+      "night"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "v09fv20d",
+     "name": "Tab. Paracetamol 650 mg",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "needed"
+     ],
+     "food": "any",
+     "note": "for pain / fever",
+     "unsure": {}
+    },
+    {
+     "id": "2i5cmoxe",
+     "name": "Cap. Vitamin D3 60K",
+     "amount": 1,
+     "unit": "capsule",
+     "times": [
+      "morning"
+     ],
+     "food": "any",
+     "note": "once a week (Sunday) x 8 wks",
+     "unsure": {}
+    }
+   ]
+  },
+  {
+   "id": "rx-02",
+   "style": "hand-noteworthy",
+   "clinic": "Lakeview Medical Centre",
+   "lines": [
+    "Tab. Ecosprin 75   0 – 1 – 0   after lunch",
+    "Tab. Clopidogrel 75 mg   0 – 1 – 0   PC",
+    "Tab. Metoprolol XL 25   1 – 0 – 1",
+    "Tab. Rosuvastatin 20   0 – 0 – 1",
+    "Tab. Sorbitrate 5 mg   SOS for chest pain (under tongue)"
+   ],
+   "model": "gemini-3-flash-preview",
+   "readAt": "2026-10-24T16:11:35.957Z",
+   "score": {
+    "rows": [
+     {
+      "key": "ecosprin",
+      "found": true,
+      "read": "Tab. Ecosprin 75",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "clopidogrel",
+      "found": true,
+      "read": "Tab. Clopidogrel 75 mg",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "metoprolol",
+      "found": true,
+      "read": "Tab. Metoprolol XL 25",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "rosuvastatin",
+      "found": true,
+      "read": "Tab. Rosuvastatin 20",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "sorbitrate",
+      "found": true,
+      "read": "Tab. Sorbitrate 5 mg",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     }
+    ],
+    "extra": []
+   },
+   "medicines": [
+    {
+     "id": "gp27zagj",
+     "name": "Tab. Ecosprin 75",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "afternoon"
+     ],
+     "food": "after",
+     "note": "after lunch",
+     "unsure": {}
+    },
+    {
+     "id": "dto7qhtr",
+     "name": "Tab. Clopidogrel 75 mg",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "afternoon"
+     ],
+     "food": "after",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "bqtzqhq4",
+     "name": "Tab. Metoprolol XL 25",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "night"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "erg2iwf2",
+     "name": "Tab. Rosuvastatin 20",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "night"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "gp6vpc1m",
+     "name": "Tab. Sorbitrate 5 mg",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "needed"
+     ],
+     "food": "any",
+     "note": "for chest pain (under tongue)",
+     "unsure": {}
+    }
+   ]
+  },
+  {
+   "id": "rx-03",
+   "style": "hand-chalk",
+   "clinic": "Shanti Children & Family Clinic",
+   "lines": [
+    "Tab. Azithromycin 500 mg   OD  × 3 days",
+    "Syp. Ascoril LS   5 ml TDS",
+    "Tab. Montelukast-Levocetirizine   HS  × 5 days",
+    "Tab. Pan-D   OD before breakfast",
+    "Steam inhalation BD"
+   ],
+   "model": "gemini-3.5-flash",
+   "readAt": "2026-10-24T16:11:53.912Z",
+   "score": {
+    "rows": [
+     {
+      "key": "azithromycin",
+      "found": true,
+      "read": "Tab. Azithromycin 500 mg",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "ascoril",
+      "found": true,
+      "read": "Syp. Ascoril LS",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "montelukast",
+      "found": true,
+      "read": "Tab. Montelukast-Levocetirizine",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "pan-d",
+      "found": true,
+      "read": "Tab. Pan-D",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     }
+    ],
+    "extra": []
+   },
+   "medicines": [
+    {
+     "id": "e3q6dd7l",
+     "name": "Tab. Azithromycin 500 mg",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "any",
+     "note": "x 3 days",
+     "unsure": {}
+    },
+    {
+     "id": "1yrhauhl",
+     "name": "Syp. Ascoril LS",
+     "amount": 5,
+     "unit": "ml",
+     "times": [
+      "morning",
+      "afternoon",
+      "night"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "ze6tkri2",
+     "name": "Tab. Montelukast-Levocetirizine",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "night"
+     ],
+     "food": "any",
+     "note": "x 5 days",
+     "unsure": {}
+    },
+    {
+     "id": "um7ybyeq",
+     "name": "Tab. Pan-D",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "before",
+     "note": "before breakfast",
+     "unsure": {}
+    }
+   ]
+  },
+  {
+   "id": "rx-04",
+   "style": "typed",
+   "clinic": "City General Hospital — Discharge Summary",
+   "lines": [
+    "1. TAB. FUROSEMIDE 40 MG — 1 TAB BD (8 AM, 4 PM)",
+    "2. TAB. SPIRONOLACTONE 25 MG — 1 TAB OD (MORNING)",
+    "3. TAB. TELMISARTAN 40 MG — ½ TAB OD",
+    "4. TAB. CARVEDILOL 6.25 MG — 1 TAB BD AFTER FOOD",
+    "5. TAB. FEBUXOSTAT 40 MG — 1 TAB OD AFTER DINNER"
+   ],
+   "model": "gemini-3.5-flash",
+   "readAt": "2026-10-24T16:12:05.380Z",
+   "score": {
+    "rows": [
+     {
+      "key": "furosemide",
+      "found": true,
+      "read": "TAB. FUROSEMIDE 40 MG",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": false,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "spironolactone",
+      "found": true,
+      "read": "TAB. SPIRONOLACTONE 25 MG",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "telmisartan",
+      "found": true,
+      "read": "TAB. TELMISARTAN 40 MG",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "carvedilol",
+      "found": true,
+      "read": "TAB. CARVEDILOL 6.25 MG",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "febuxostat",
+      "found": true,
+      "read": "TAB. FEBUXOSTAT 40 MG",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     }
+    ],
+    "extra": []
+   },
+   "medicines": [
+    {
+     "id": "x95b13tr",
+     "name": "TAB. FUROSEMIDE 40 MG",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "evening"
+     ],
+     "food": "any",
+     "note": "8 AM, 4 PM",
+     "unsure": {}
+    },
+    {
+     "id": "44sqorpw",
+     "name": "TAB. SPIRONOLACTONE 25 MG",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "yg91ygaa",
+     "name": "TAB. TELMISARTAN 40 MG",
+     "amount": 0.5,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "0b7er7qk",
+     "name": "TAB. CARVEDILOL 6.25 MG",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "night"
+     ],
+     "food": "after",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "h2umurp8",
+     "name": "TAB. FEBUXOSTAT 40 MG",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "night"
+     ],
+     "food": "after",
+     "note": "",
+     "unsure": {}
+    }
+   ]
+  },
+  {
+   "id": "rx-05",
+   "style": "hand-marker",
+   "clinic": "Dr. N. Bose's Clinic (fictional)",
+   "lines": [
+    "Foracort 200 Rotacaps — 1 puff BD (rinse mouth)",
+    "Asthalin inhaler — 2 puffs SOS",
+    "Tab. Doxofylline 400   0-0-1",
+    "Tab. Deriphyllin retard 150   1-0-1"
+   ],
+   "model": "gemini-3.5-flash",
+   "readAt": "2026-10-24T16:12:13.064Z",
+   "score": {
+    "rows": [
+     {
+      "key": "foracort",
+      "found": true,
+      "read": "Foracort 200 Rotacaps",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "asthalin",
+      "found": true,
+      "read": "Asthalin inhaler",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "doxofylline",
+      "found": true,
+      "read": "Tab. Doxofylline 400",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "deriphyllin",
+      "found": true,
+      "read": "Tab. Deriphyllin retard 150",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     }
+    ],
+    "extra": []
+   },
+   "medicines": [
+    {
+     "id": "c8lm18km",
+     "name": "Foracort 200 Rotacaps",
+     "amount": 1,
+     "unit": "puff",
+     "times": [
+      "morning",
+      "night"
+     ],
+     "food": "any",
+     "note": "rinse mouth",
+     "unsure": {}
+    },
+    {
+     "id": "90zsogue",
+     "name": "Asthalin inhaler",
+     "amount": 2,
+     "unit": "puff",
+     "times": [
+      "needed"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "0ycds0jb",
+     "name": "Tab. Doxofylline 400",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "night"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "uxdy9tcp",
+     "name": "Tab. Deriphyllin retard 150",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "night"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    }
+   ]
+  },
+  {
+   "id": "rx-06",
+   "style": "hand-bradley",
+   "clinic": "Netra Eye Hospital (fictional)",
+   "lines": [
+    "Moxifloxacin eye drops — 1 drop QID × 1 week",
+    "Prednisolone acetate eye drops — 1 drop 6 times a day × 1 week, then QID",
+    "Lubricant eye drops — 2 drops TDS",
+    "Tab. Paracetamol 500 SOS"
+   ],
+   "model": "gemini-3.5-flash",
+   "readAt": "2026-10-24T16:12:22.274Z",
+   "score": {
+    "rows": [
+     {
+      "key": "moxifloxacin",
+      "found": true,
+      "read": "Moxifloxacin eye drops",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "prednisolone",
+      "found": true,
+      "read": "Prednisolone acetate eye drops",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "lubricant",
+      "found": true,
+      "read": "Lubricant eye drops",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "paracetamol",
+      "found": true,
+      "read": "Tab. Paracetamol 500",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     }
+    ],
+    "extra": []
+   },
+   "medicines": [
+    {
+     "id": "kwr9zcrc",
+     "name": "Moxifloxacin eye drops",
+     "amount": 1,
+     "unit": "drops",
+     "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+     ],
+     "food": "any",
+     "note": "x 1 week",
+     "unsure": {}
+    },
+    {
+     "id": "28900v03",
+     "name": "Prednisolone acetate eye drops",
+     "amount": 1,
+     "unit": "drops",
+     "times": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+     ],
+     "food": "any",
+     "note": "6 times a day x 1 week, then QID",
+     "unsure": {
+      "times": true
+     }
+    },
+    {
+     "id": "e20pj4vm",
+     "name": "Lubricant eye drops",
+     "amount": 2,
+     "unit": "drops",
+     "times": [
+      "morning",
+      "afternoon",
+      "night"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "cnm77xwz",
+     "name": "Tab. Paracetamol 500",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "needed"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    }
+   ]
+  },
+  {
+   "id": "rx-07",
+   "style": "hand-noteworthy",
+   "clinic": "Arogya Diabetes Care (fictional)",
+   "lines": [
+    "Tab. Glimepiride 1 mg   1 — 0 — 0   15 min before breakfast",
+    "Tab. Metformin SR 1000   0 — 0 — 1   with dinner",
+    "Tab. Sitagliptin 50   1 — 0 — 0",
+    "Tab. Shelcal 500   0 — 1 — 0   after lunch"
+   ],
+   "model": "gemini-3-flash-preview",
+   "readAt": "2026-10-24T16:12:35.779Z",
+   "score": {
+    "rows": [
+     {
+      "key": "glimepiride",
+      "found": true,
+      "read": "Tab. Glimepiride 1 mg",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "metformin",
+      "found": true,
+      "read": "Tab. Metformin SR 1000",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "sitagliptin",
+      "found": true,
+      "read": "Tab. Sitagliptin 50",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "shelcal",
+      "found": true,
+      "read": "Tab. Shelcal 500",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     }
+    ],
+    "extra": []
+   },
+   "medicines": [
+    {
+     "id": "xv9znubt",
+     "name": "Tab. Glimepiride 1 mg",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "before",
+     "note": "15 min before breakfast",
+     "unsure": {}
+    },
+    {
+     "id": "iswpgmmb",
+     "name": "Tab. Metformin SR 1000",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "night"
+     ],
+     "food": "with",
+     "note": "with dinner",
+     "unsure": {}
+    },
+    {
+     "id": "98kdt1py",
+     "name": "Tab. Sitagliptin 50",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "nohzqmbv",
+     "name": "Tab. Shelcal 500",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "afternoon"
+     ],
+     "food": "after",
+     "note": "after lunch",
+     "unsure": {}
+    }
+   ]
+  },
+  {
+   "id": "rx-08",
+   "style": "hand-chalk",
+   "clinic": "Shree Ortho & Spine (fictional)",
+   "lines": [
+    "Tab. Etoricoxib 60 mg   OD after food × 10 days",
+    "Tab. Rabeprazole 20   OD AC",
+    "Cap. Glucosamine + Chondroitin   1 BD × 3 months",
+    "Diclofenac gel — local application TDS"
+   ],
+   "model": "gemini-3.5-flash",
+   "readAt": "2026-10-24T16:12:44.509Z",
+   "score": {
+    "rows": [
+     {
+      "key": "etoricoxib",
+      "found": true,
+      "read": "Tab. Etoricoxib 60 mg",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "rabeprazole",
+      "found": true,
+      "read": "Tab. Rabeprazole 20",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "glucosamine",
+      "found": true,
+      "read": "Cap. Glucosamine + Chondroitin",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     }
+    ],
+    "extra": []
+   },
+   "medicines": [
+    {
+     "id": "v2zsxnxk",
+     "name": "Tab. Etoricoxib 60 mg",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "after",
+     "note": "x 10 days",
+     "unsure": {}
+    },
+    {
+     "id": "lv1y819a",
+     "name": "Tab. Rabeprazole 20",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "before",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "sg4sdarj",
+     "name": "Cap. Glucosamine + Chondroitin",
+     "amount": 1,
+     "unit": "capsule",
+     "times": [
+      "morning",
+      "night"
+     ],
+     "food": "any",
+     "note": "x 3 months",
+     "unsure": {}
+    },
+    {
+     "id": "3ya3zncb",
+     "name": "Diclofenac gel",
+     "amount": 1,
+     "unit": "other",
+     "times": [
+      "morning",
+      "afternoon",
+      "night"
+     ],
+     "food": "any",
+     "note": "local application",
+     "unsure": {
+      "amount": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "rx-09",
+   "style": "hand-marker",
+   "clinic": "Dr. S. Iqbal, Physician (fictional)",
+   "lines": [
+    "Tab. Thyronorm 50 mcg   empty stomach, early morning",
+    "Tab. Orofer XT   0 – 1 – 0   after lunch",
+    "Tab. Folvite 5 mg   OD",
+    "ORS — 1 sachet in 1 L water, sip through the day"
+   ],
+   "model": "gemini-3-flash-preview",
+   "readAt": "2026-10-24T16:13:00.264Z",
+   "score": {
+    "rows": [
+     {
+      "key": "thyronorm",
+      "found": true,
+      "read": "Tab. Thyronorm 50 mcg",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "orofer",
+      "found": true,
+      "read": "Tab. Orofer XT",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "folvite",
+      "found": true,
+      "read": "Tab. Folvite 5 mg",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "ors",
+      "found": true,
+      "read": "ORS",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     }
+    ],
+    "extra": []
+   },
+   "medicines": [
+    {
+     "id": "ajfek07j",
+     "name": "Tab. Thyronorm 50 mcg",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "before",
+     "note": "early morning",
+     "unsure": {}
+    },
+    {
+     "id": "y35to5w9",
+     "name": "Tab. Orofer XT",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "afternoon"
+     ],
+     "food": "after",
+     "note": "after lunch",
+     "unsure": {}
+    },
+    {
+     "id": "kyf3qxmq",
+     "name": "Tab. Folvite 5 mg",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "mtuoq3bf",
+     "name": "ORS",
+     "amount": 1,
+     "unit": "sachet",
+     "times": [
+      "morning"
+     ],
+     "food": "any",
+     "note": "1 sachet in 1 L water, sip through the day",
+     "unsure": {
+      "times": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "rx-10",
+   "style": "hand-bradley",
+   "clinic": "Prakash Neuro Clinic (fictional)",
+   "lines": [
+    "Tab. Syndopa Plus   ½ – ½ – ½",
+    "Tab. Pramipexole 0.25 mg   1 – 0 – 1",
+    "Tab. Donepezil 5 mg   HS",
+    "Tab. Clonazepam 0.25 mg   ½ tab HS"
+   ],
+   "model": "gemini-3.5-flash",
+   "readAt": "2026-10-24T16:13:08.226Z",
+   "score": {
+    "rows": [
+     {
+      "key": "syndopa",
+      "found": true,
+      "read": "Tab. Syndopa Plus",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "pramipexole",
+      "found": true,
+      "read": "Tab. Pramipexole 0.25 mg",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "donepezil",
+      "found": true,
+      "read": "Tab. Donepezil 5 mg",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "clonazepam",
+      "found": true,
+      "read": "Tab. Clonazepam 0.25 mg",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     }
+    ],
+    "extra": []
+   },
+   "medicines": [
+    {
+     "id": "a9s7bjx0",
+     "name": "Tab. Syndopa Plus",
+     "amount": 0.5,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "afternoon",
+      "night"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "lt0odges",
+     "name": "Tab. Pramipexole 0.25 mg",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "night"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "0bz3kdwy",
+     "name": "Tab. Donepezil 5 mg",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "night"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "efwcr0ca",
+     "name": "Tab. Clonazepam 0.25 mg",
+     "amount": 0.5,
+     "unit": "tablet",
+     "times": [
+      "night"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    }
+   ]
+  },
+  {
+   "id": "rx-11",
+   "style": "typed",
+   "clinic": "Apex Multispeciality — OPD Prescription",
+   "lines": [
+    "Tab Losartan 50mg        1-0-0",
+    "Tab Hydrochlorothiazide 12.5mg   1-0-0",
+    "Tab Atorvastatin 20mg    0-0-1",
+    "Tab Alendronate 70mg     once a week (Monday), empty stomach",
+    "Cap Calcitriol 0.25mcg   0-1-0 after lunch"
+   ],
+   "model": "gemini-3-flash-preview",
+   "readAt": "2026-10-24T16:13:27.498Z",
+   "score": {
+    "rows": [
+     {
+      "key": "losartan",
+      "found": true,
+      "read": "Tab Losartan 50mg",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "hydrochlorothiazide",
+      "found": true,
+      "read": "Tab Hydrochlorothiazide 12.5mg",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "atorvastatin",
+      "found": true,
+      "read": "Tab Atorvastatin 20mg",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "alendronate",
+      "found": true,
+      "read": "Tab Alendronate 70mg",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "calcitriol",
+      "found": true,
+      "read": "Cap Calcitriol 0.25mcg",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     }
+    ],
+    "extra": []
+   },
+   "medicines": [
+    {
+     "id": "lvvh8d4f",
+     "name": "Tab Losartan 50mg",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "5or0kqjp",
+     "name": "Tab Hydrochlorothiazide 12.5mg",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "2ntyl6v0",
+     "name": "Tab Atorvastatin 20mg",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "night"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "7j40ui2p",
+     "name": "Tab Alendronate 70mg",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "before",
+     "note": "once a week (Monday)",
+     "unsure": {}
+    },
+    {
+     "id": "6xc5vilt",
+     "name": "Cap Calcitriol 0.25mcg",
+     "amount": 1,
+     "unit": "capsule",
+     "times": [
+      "afternoon"
+     ],
+     "food": "after",
+     "note": "",
+     "unsure": {}
+    }
+   ]
+  },
+  {
+   "id": "rx-12",
+   "style": "hand-noteworthy",
+   "clinic": "Gupta Clinic (fictional)",
+   "lines": [
+    "Cap. Tamsulosin 0.4   HS",
+    "Tab. Dutasteride 0.5   OD",
+    "Tab. Tolterodine 2 mg   1-0-1",
+    "Syp. Lactulose 15 ml   HS if constipated"
+   ],
+   "model": "gemini-3.5-flash",
+   "readAt": "2026-10-24T16:13:35.811Z",
+   "score": {
+    "rows": [
+     {
+      "key": "tamsulosin",
+      "found": true,
+      "read": "Cap. Tamsulosin 0.4",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "dutasteride",
+      "found": true,
+      "read": "Tab. Dutasteride 0.5",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "tolterodine",
+      "found": true,
+      "read": "Tab. Tolterodine 2 mg",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "lactulose",
+      "found": true,
+      "read": "Syp. Lactulose",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     }
+    ],
+    "extra": []
+   },
+   "medicines": [
+    {
+     "id": "dmvk6s6u",
+     "name": "Cap. Tamsulosin 0.4",
+     "amount": 1,
+     "unit": "capsule",
+     "times": [
+      "night"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "pnguzr6x",
+     "name": "Tab. Dutasteride 0.5",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "3lreqgfi",
+     "name": "Tab. Tolterodine 2 mg",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "night"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "0unucjrt",
+     "name": "Syp. Lactulose",
+     "amount": 15,
+     "unit": "ml",
+     "times": [
+      "night"
+     ],
+     "food": "any",
+     "note": "if constipated",
+     "unsure": {}
+    }
+   ]
+  },
+  {
+   "id": "rx-13",
+   "style": "hand-chalk",
+   "clinic": "Sai Krupa Clinic (fictional)",
+   "lines": [
+    "Tab. Nitrofurantoin 100   1 – 0 – 1   after food × 5 days",
+    "Tab. Cranberry extract   OD",
+    "Syp. Alkasol 10 ml   TDS with water",
+    "Plenty of oral fluids"
+   ],
+   "model": "gemini-3-flash-preview",
+   "readAt": "2026-10-24T16:13:44.228Z",
+   "score": {
+    "rows": [
+     {
+      "key": "nitrofurantoin",
+      "found": true,
+      "read": "Tab. Nitrofurantoin 100",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "cranberry",
+      "found": true,
+      "read": "Tab. Cranberry extract",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "alkasol",
+      "found": true,
+      "read": "Syp. Alkasol",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     }
+    ],
+    "extra": []
+   },
+   "medicines": [
+    {
+     "id": "1irywbuv",
+     "name": "Tab. Nitrofurantoin 100",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "night"
+     ],
+     "food": "after",
+     "note": "x 5 days",
+     "unsure": {}
+    },
+    {
+     "id": "o0yw8t2c",
+     "name": "Tab. Cranberry extract",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "6hodl2sj",
+     "name": "Syp. Alkasol",
+     "amount": 10,
+     "unit": "ml",
+     "times": [
+      "morning",
+      "afternoon",
+      "night"
+     ],
+     "food": "any",
+     "note": "with water",
+     "unsure": {}
+    }
+   ]
+  },
+  {
+   "id": "rx-14",
+   "style": "hand-marker",
+   "clinic": "Dr. P. Kulkarni (fictional)",
+   "lines": [
+    "Tab. Omeprazole 20   1 — 0 — 1   ½ hr before meals",
+    "Syp. Sucralfate 10 ml   TDS before food",
+    "Tab. Domperidone 10   TDS AC",
+    "Cap. Becosules   OD after lunch"
+   ],
+   "model": "gemini-3-flash-preview",
+   "readAt": "2026-10-24T16:13:50.492Z",
+   "score": {
+    "rows": [
+     {
+      "key": "omeprazole",
+      "found": true,
+      "read": "Tab. Omeprazole 20",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "sucralfate",
+      "found": true,
+      "read": "Syp. Sucralfate 10 ml",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "domperidone",
+      "found": true,
+      "read": "Tab. Domperidone 10",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "becosules",
+      "found": true,
+      "read": "Cap. Becosules",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     }
+    ],
+    "extra": []
+   },
+   "medicines": [
+    {
+     "id": "wm9jstd6",
+     "name": "Tab. Omeprazole 20",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "night"
+     ],
+     "food": "before",
+     "note": "1/2 hr before meals",
+     "unsure": {}
+    },
+    {
+     "id": "5mocjb0u",
+     "name": "Syp. Sucralfate 10 ml",
+     "amount": 10,
+     "unit": "ml",
+     "times": [
+      "morning",
+      "afternoon",
+      "night"
+     ],
+     "food": "before",
+     "note": "before food",
+     "unsure": {}
+    },
+    {
+     "id": "yvrlxmbr",
+     "name": "Tab. Domperidone 10",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "afternoon",
+      "night"
+     ],
+     "food": "before",
+     "note": "AC",
+     "unsure": {}
+    },
+    {
+     "id": "2ji8w6ku",
+     "name": "Cap. Becosules",
+     "amount": 1,
+     "unit": "capsule",
+     "times": [
+      "afternoon"
+     ],
+     "food": "after",
+     "note": "after lunch",
+     "unsure": {}
+    }
+   ]
+  },
+  {
+   "id": "rx-15",
+   "style": "hand-script",
+   "clinic": "Dr. A. Fernandes (fictional)",
+   "lines": [
+    "Tab. Apixaban 2.5 mg  1 - 0 - 1",
+    "Tab. Digoxin 0.25  ½ tab OD",
+    "Tab. Bisoprolol 2.5  OD morning",
+    "Tab. Pantocid 40  OD before breakfast"
+   ],
+   "model": "gemini-3-flash-preview",
+   "readAt": "2026-10-24T16:15:16.469Z",
+   "score": {
+    "rows": [
+     {
+      "key": "apixaban",
+      "found": true,
+      "read": "Tab. Apixaban 2.5 mg",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "digoxin",
+      "found": true,
+      "read": "Tab. Digoxin 0.25",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "bisoprolol",
+      "found": true,
+      "read": "Tab. Bisoprolol 2.5",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "pantocid",
+      "found": true,
+      "read": "Tab. Pantocid 40",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     }
+    ],
+    "extra": []
+   },
+   "medicines": [
+    {
+     "id": "m91ndawz",
+     "name": "Tab. Apixaban 2.5 mg",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "night"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "7aa1ly9m",
+     "name": "Tab. Digoxin 0.25",
+     "amount": 0.5,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "any",
+     "note": "½ tab",
+     "unsure": {}
+    },
+    {
+     "id": "bxi5626u",
+     "name": "Tab. Bisoprolol 2.5",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "any",
+     "note": "morning",
+     "unsure": {}
+    },
+    {
+     "id": "z7bf8ge6",
+     "name": "Tab. Pantocid 40",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "before",
+     "note": "before breakfast",
+     "unsure": {}
+    }
+   ]
+  },
+  {
+   "id": "rx-16",
+   "style": "hand-noteworthy",
+   "clinic": "Ganga Clinic (fictional)",
+   "lines": [
+    "Tab. Betahistine 16 mg  1-1-1  after food",
+    "Tab. Cinnarizine 25  SOS for giddiness",
+    "Tab. Cilnidipine 10  1-0-0",
+    "Tab. Ondansetron 4 mg  SOS vomiting"
+   ],
+   "model": "gemini-3-flash-preview",
+   "readAt": "2026-10-24T16:15:22.915Z",
+   "score": {
+    "rows": [
+     {
+      "key": "betahistine",
+      "found": true,
+      "read": "Tab. Betahistine 16 mg",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "cinnarizine",
+      "found": true,
+      "read": "Tab. Cinnarizine 25",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "cilnidipine",
+      "found": true,
+      "read": "Tab. Cilnidipine 10",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "ondansetron",
+      "found": true,
+      "read": "Tab. Ondansetron 4 mg",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     }
+    ],
+    "extra": []
+   },
+   "medicines": [
+    {
+     "id": "8ic0m2jt",
+     "name": "Tab. Betahistine 16 mg",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "afternoon",
+      "night"
+     ],
+     "food": "after",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "zjkvr37d",
+     "name": "Tab. Cinnarizine 25",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "needed"
+     ],
+     "food": "any",
+     "note": "for giddiness",
+     "unsure": {}
+    },
+    {
+     "id": "n205guf5",
+     "name": "Tab. Cilnidipine 10",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "mc2pjo41",
+     "name": "Tab. Ondansetron 4 mg",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "needed"
+     ],
+     "food": "any",
+     "note": "SOS vomiting",
+     "unsure": {}
+    }
+   ]
+  },
+  {
+   "id": "rx-17",
+   "style": "hand-bradley",
+   "clinic": "Sharma Clinic, Varanasi (fictional)",
+   "lines": [
+    "Tab. Glycomet GP 1  सुबह-शाम खाने के बाद",
+    "Tab. Telma 40  सुबह खाली पेट",
+    "Tab. Atorva 10  रात को सोते समय",
+    "Syp. Digene 10 ml  खाने के बाद, दिन में तीन बार"
+   ],
+   "model": "gemini-3-flash-preview",
+   "readAt": "2026-10-24T16:15:31.621Z",
+   "score": {
+    "rows": [
+     {
+      "key": "glycomet",
+      "found": true,
+      "read": "Tab. Glycomet GP 1",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "telma",
+      "found": true,
+      "read": "Tab. Telma 40",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "atorva",
+      "found": true,
+      "read": "Tab. Atorva 10",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     },
+     {
+      "key": "digene",
+      "found": true,
+      "read": "Syp. Digene 10 ml",
+      "fields": {
+       "amount": true,
+       "unit": true,
+       "times": true,
+       "food": true
+      },
+      "flaggedWrong": []
+     }
+    ],
+    "extra": []
+   },
+   "medicines": [
+    {
+     "id": "vglns2rv",
+     "name": "Tab. Glycomet GP 1",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning",
+      "evening"
+     ],
+     "food": "after",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "yp3ybhh6",
+     "name": "Tab. Telma 40",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "morning"
+     ],
+     "food": "before",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "a639355k",
+     "name": "Tab. Atorva 10",
+     "amount": 1,
+     "unit": "tablet",
+     "times": [
+      "night"
+     ],
+     "food": "any",
+     "note": "",
+     "unsure": {}
+    },
+    {
+     "id": "8imt7fng",
+     "name": "Syp. Digene 10 ml",
+     "amount": 10,
+     "unit": "ml",
+     "times": [
+      "morning",
+      "afternoon",
+      "night"
+     ],
+     "food": "after",
+     "note": "",
+     "unsure": {}
+    }
+   ]
+  }
+ ]
+}

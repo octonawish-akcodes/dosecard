@@ -67,29 +67,24 @@ export function DoseCardApp() {
   );
 
   return (
-    <main className="mx-auto grid max-w-[1400px] grid-cols-[minmax(0,1fr)] gap-8 px-4 py-6 md:px-8 lg:grid-cols-[minmax(0,30rem)_minmax(0,1fr)] lg:py-10">
-      <section aria-labelledby="app-title" className="app-panel">
-        <h1 id="app-title" className="font-display text-4xl text-ink">
-          Dose Card
-        </h1>
-        <p className="mt-2 text-lg leading-snug text-muted">
-          Turn a prescription into a big, picture timetable your grandparent can read on the fridge, in English and
-          their own language.
-        </p>
+    <section id="make" aria-labelledby="make-title" className="tool mx-auto grid max-w-[1320px] grid-cols-[minmax(0,1fr)] gap-8 px-4 py-14 md:px-8 lg:grid-cols-[minmax(0,30rem)_minmax(0,1fr)]">
+      <div className="app-panel">
+        <h2 id="make-title" className="display-2">
+          Make a card
+        </h2>
+        <p className="mt-2 text-lg leading-snug text-muted">Start with the prescription, then check every row against the paper.</p>
 
         <StartPanel onRead={setMedicines} onAddBlank={() => setMedicines([...state.medicines, blankMedicine()])} />
 
         {state.medicines.length > 0 && (
           <div className="mt-6">
-            <h2 className="mb-2 text-sm font-bold uppercase tracking-wide text-muted">1. Check each medicine against the paper</h2>
+            <h3 className="step-title">1. Check each medicine against the paper</h3>
             <MedicineList medicines={state.medicines} onChange={setMedicines} />
           </div>
         )}
 
         <div className="mt-6">
-          <h2 className="mb-2 text-sm font-bold uppercase tracking-wide text-muted">
-            {state.medicines.length > 0 ? "2. " : ""}Card details
-          </h2>
+          <h3 className="step-title">{state.medicines.length > 0 ? "2. " : ""}Card details</h3>
           <CardDetails state={state} onChange={(patch) => setState((s) => ({ ...s, ...patch }))} />
         </div>
 
@@ -102,9 +97,9 @@ export function DoseCardApp() {
           )}
           <p className="text-sm text-muted">Saved in this browser only. Nothing is stored on our server.</p>
         </div>
-      </section>
+      </div>
 
-      <section aria-label="Card preview" className="preview lg:sticky lg:top-6 lg:self-start">
+      <div aria-label="Card preview" className="preview lg:sticky lg:top-20 lg:self-start">
         <Card
           medicines={empty ? EXAMPLE : state.medicines}
           lang={state.lang}
@@ -113,7 +108,7 @@ export function DoseCardApp() {
           made={made}
           example={empty}
         />
-      </section>
-    </main>
+      </div>
+    </section>
   );
 }

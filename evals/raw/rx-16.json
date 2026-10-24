@@ -1,0 +1,56 @@
+{
+ "model": "gemini-3-flash-preview",
+ "readAt": "2026-10-24T16:15:22.915Z",
+ "medicines": [
+  {
+   "id": "8ic0m2jt",
+   "name": "Tab. Betahistine 16 mg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning",
+    "afternoon",
+    "night"
+   ],
+   "food": "after",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "zjkvr37d",
+   "name": "Tab. Cinnarizine 25",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "needed"
+   ],
+   "food": "any",
+   "note": "for giddiness",
+   "unsure": {}
+  },
+  {
+   "id": "n205guf5",
+   "name": "Tab. Cilnidipine 10",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "mc2pjo41",
+   "name": "Tab. Ondansetron 4 mg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "needed"
+   ],
+   "food": "any",
+   "note": "SOS vomiting",
+   "unsure": {}
+  }
+ ]
+}

@@ -1,0 +1,55 @@
+{
+ "model": "gemini-3.5-flash",
+ "readAt": "2026-10-24T16:13:35.811Z",
+ "medicines": [
+  {
+   "id": "dmvk6s6u",
+   "name": "Cap. Tamsulosin 0.4",
+   "amount": 1,
+   "unit": "capsule",
+   "times": [
+    "night"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "pnguzr6x",
+   "name": "Tab. Dutasteride 0.5",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "3lreqgfi",
+   "name": "Tab. Tolterodine 2 mg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning",
+    "night"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "0unucjrt",
+   "name": "Syp. Lactulose",
+   "amount": 15,
+   "unit": "ml",
+   "times": [
+    "night"
+   ],
+   "food": "any",
+   "note": "if constipated",
+   "unsure": {}
+  }
+ ]
+}

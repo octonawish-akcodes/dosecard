@@ -13,6 +13,8 @@ type Props = {
   made: string;
   /** Shows a faint example instead of the real list (first visit). */
   example?: boolean;
+  /** Only the app's own card uses the default id, which printing looks for. */
+  id?: string;
 };
 
 /** English on top; the chosen language underneath, in its own script and direction. */
@@ -118,7 +120,7 @@ function PictureKey({ medicines, l, lang }: Body) {
         {keys.map((k) => {
           const { icon, pick } = keyEntry(k);
           return (
-            <li key={k} className="key-item">
+            <li key={k} className={`key-item ${k === "cup" ? "key-item-unit" : ""}`}>
               <span className="key-icon">{icon}</span>
               <Bi pick={pick} l={l} lang={lang} />
             </li>
@@ -129,10 +131,10 @@ function PictureKey({ medicines, l, lang }: Body) {
   );
 }
 
-export function Card({ medicines, lang, patient, phone, made, example }: Props) {
+export function Card({ medicines, lang, patient, phone, made, example, id = "card" }: Props) {
   const l = labels(lang);
   return (
-    <article id="card" className={`card ${example ? "card-example" : ""}`} aria-label="Medicine card preview">
+    <article id={id} className={`card ${example ? "card-example" : ""}`} aria-label="Medicine card preview">
       <header className="card-head">
         <Bi pick={(x) => x.title} l={l} lang={lang} className="card-title" />
         {patient.trim() && <p className="card-patient">{patient.trim()}</p>}

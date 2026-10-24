@@ -19,7 +19,15 @@ Source: `scope.md > The Core Loop`, `scope.md > What "Working" Looks Like`.
 6. They press **Print card**, which prints or saves an A4 PDF. That's success: a clean card with medicines grouped into time-of-day rows, ready for the fridge.
 
 ## Screens and Layout
-One screen, two panels:
+Added at final review, at the learner's request ("please make a good website"): the tool sits inside a one-page site.
+- **Hero:** the sample prescription turning into its card.
+- **Two sourced facts** on why it matters.
+- **How it works** in three steps.
+- **The tool.**
+- **Test results**, linking to an **Evidence page** that scores the reader on 17 fictional prescriptions.
+- **Safety and privacy.**
+
+The tool itself is one screen, two panels:
 - **Left: Medicines.** Start buttons, the language picker, optional name and phone fields, and the list of medicine rows.
 - **Right: Card preview.** Exactly what will print.
 - **On a phone:** the panels stack, medicines first, with a "See card" button that jumps to the preview.
@@ -96,6 +104,7 @@ Source: `scope.md > The POC Boundary`.
   - Keeping the list in this browser between visits.
 
 ## What We're Building
+- A one-page site around the tool, plus an Evidence page with the reader's measured accuracy (added at final review).
 - One-screen app, with photo reading, the sample prescription and manual entry.
 - An editable medicine list with "Please check" marks.
 - A live card preview with time rows, pictures, food markers and bilingual labels in 15 languages plus English.
