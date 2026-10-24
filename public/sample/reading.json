@@ -1,0 +1,90 @@
+{
+ "note": "Saved reading of public/sample/prescription.jpg, recorded from a real Gemini run on 2026-10-24. Used only when the live reader is unavailable.",
+ "medicines": [
+  {
+   "id": "bcfzzyfb",
+   "name": "Tab. Metformin 500 mg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning",
+    "night"
+   ],
+   "food": "after",
+   "note": "x 1 month",
+   "unsure": {}
+  },
+  {
+   "id": "sf5wr5sy",
+   "name": "Tab. Amlodipine 5 mg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning"
+   ],
+   "food": "any",
+   "note": "x 1 month",
+   "unsure": {}
+  },
+  {
+   "id": "nbq6dxna",
+   "name": "Tab. Pantoprazole 40 mg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "morning"
+   ],
+   "food": "before",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "i5di0yly",
+   "name": "Tab. Atorvastatin 10 mg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "night"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "leqbnj57",
+   "name": "Syp. Cremaffin",
+   "amount": 10,
+   "unit": "ml",
+   "times": [
+    "night"
+   ],
+   "food": "any",
+   "note": "",
+   "unsure": {}
+  },
+  {
+   "id": "owj06b72",
+   "name": "Tab. Paracetamol 650 mg",
+   "amount": 1,
+   "unit": "tablet",
+   "times": [
+    "needed"
+   ],
+   "food": "any",
+   "note": "for pain / fever",
+   "unsure": {}
+  },
+  {
+   "id": "m7lwqe3x",
+   "name": "Cap. Vitamin D3 60K",
+   "amount": 1,
+   "unit": "capsule",
+   "times": [
+    "morning"
+   ],
+   "food": "any",
+   "note": "once a week (Sunday) x 8 wks",
+   "unsure": {}
+  }
+ ]
+}

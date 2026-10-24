@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildCard, needsTime } from "@/lib/card";
+import { buildCard, cardName, needsTime } from "@/lib/card";
 import type { Medicine } from "@/lib/types";
 
 const med = (over: Partial<Medicine>): Medicine => ({
@@ -35,5 +35,16 @@ describe("buildCard", () => {
   it("keeps the family member's order within a row", () => {
     const rows = buildCard([med({ name: "B", times: ["morning"] }), med({ name: "A", times: ["morning"] })]);
     expect(rows[0].medicines.map((m) => m.name)).toEqual(["B", "A"]);
+  });
+});
+
+describe("cardName", () => {
+  it("drops the form prefix the amount line already says", () => {
+    expect(cardName("Tab. Metformin 500 mg")).toBe("Metformin 500 mg");
+    expect(cardName("Cap. Vitamin D3 60K")).toBe("Vitamin D3 60K");
+    expect(cardName("Syp. Cremaffin")).toBe("Cremaffin");
+    expect(cardName("tab metformin")).toBe("metformin");
+    expect(cardName("Tablets Ltd vitamin")).toBe("Tablets Ltd vitamin");
+    expect(cardName("Tab.")).toBe("Tab.");
   });
 });

@@ -16,3 +16,11 @@ export function buildCard(medicines: Medicine[]): CardRow[] {
     (row) => row.medicines.length > 0,
   );
 }
+
+const FORM_PREFIX = /^(tab|tabs|cap|caps|syp|syr|inj|oint|susp)\.?\s+(?=\S)/i;
+
+/** The name as shown on the card: without "Tab." / "Cap." / "Syp.", which the amount line already says. */
+export function cardName(name: string): string {
+  const n = name.trim();
+  return n.replace(FORM_PREFIX, "") || n;
+}

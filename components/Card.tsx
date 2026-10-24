@@ -1,4 +1,4 @@
-import { buildCard } from "@/lib/card";
+import { buildCard, cardName } from "@/lib/card";
 import { ENGLISH, amountText, labels, type Labels } from "@/lib/translations";
 import type { LangCode, Medicine } from "@/lib/types";
 import { FoodMark, PillMarks, TIME_ICON } from "./icons";
@@ -50,7 +50,7 @@ export function Card({ medicines, lang, patient, phone, made, example }: Props) 
             <ul className="tiles">
               {row.medicines.map((m) => (
                 <li key={m.id} className="tile">
-                  <p className="tile-name">{m.name.trim()}</p>
+                  <p className="tile-name">{cardName(m.name)}</p>
                   <p className="tile-amount">
                     {(m.unit === "tablet" || m.unit === "capsule") && <PillMarks amount={m.amount} className="pill-marks" />}
                     <Bi pick={(x) => amountText(x, m.amount, m.unit)} l={l} lang={lang} />

@@ -5,6 +5,7 @@ import type { AppState, Medicine } from "@/lib/types";
 import { blankMedicine } from "@/lib/types";
 import { Card } from "./Card";
 import { MedicineList } from "./MedicineList";
+import { StartPanel } from "./StartPanel";
 
 /** Shown faintly on first visit so the family member can see what they're making. */
 const EXAMPLE: Medicine[] = [
@@ -35,11 +36,7 @@ export function DoseCardApp() {
           their own language.
         </p>
 
-        <div className="mt-6 flex flex-wrap gap-2">
-          <button type="button" className="btn-quiet" onClick={() => setMedicines([...state.medicines, blankMedicine()])}>
-            Type medicines myself
-          </button>
-        </div>
+        <StartPanel onRead={setMedicines} onAddBlank={() => setMedicines([...state.medicines, blankMedicine()])} />
 
         {state.medicines.length > 0 && (
           <div className="mt-6">

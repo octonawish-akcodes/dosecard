@@ -24,7 +24,7 @@ Build mode: fast (the learner asked for the fewest rounds; hands-on checks are s
   Learner check: Run `pnpm dev`, open http://localhost:3000, add two medicines (one twice a day, after food), and see whether the card looks like something you'd stick on a fridge.
   Commit: `Type medicines and see the fridge card`
 
-- [ ] **2. A prescription photo fills the list**
+- [x] **2. A prescription photo fills the list**
   Becomes usable: Upload a prescription photo, or press "Try a sample prescription", and the medicines appear as editable rows with "Please check" marks. If reading fails, a clear message appears and typing still works.
   Why now: The Gemini reader is the riskiest dependency (accuracy, Indian shorthand, free-tier limits), so we prove it straight after the kernel exists.
   PRD ref: `prd.md > Reading the prescription`, `prd.md > The Core Journey` (steps 1–3), `prd.md > States and Boundaries` (reading, can't be read, reader unavailable)
