@@ -30,6 +30,7 @@ describe("translations", () => {
     expect(amountText(labels("en"), 1, "tablet")).toBe("1 tablet");
     expect(amountText(labels("en"), 2, "tablet")).toBe("2 tablets");
     expect(amountText(labels("en"), 0.5, "tablet")).toBe("½ tablet");
+    expect(amountText(labels("en"), 1.5, "tablet")).toBe("1½ tablets");
     expect(amountText(labels("hi"), 2, "tablet")).toBe("2 गोलियाँ");
   });
 });

@@ -73,8 +73,9 @@
 .chart-food-mark { height: 6mm; width: auto; flex-shrink: 0; }
 .chart-note { display: block; font-size: 10.5pt; font-weight: 700; margin-top: 1mm; }
 .chart-dose { display: inline-flex; flex-direction: column; align-items: center; gap: 1mm; }
-.pill-marks { display: inline-flex; gap: 1mm; }
-.pill-mark { width: 7mm; height: 4.2mm; }
+.dose-icons { display: inline-flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.8mm; }
+.dose-icon { width: 8.5mm; height: 8.5mm; }
+.dose-more { font-size: 11pt; font-weight: 700; }
 .chart-cell { font-size: 12pt; font-weight: 700; line-height: 1.2; }
 .chart-cell .bi { align-items: center; }
 .chart-c-morning:has(.bi) { background: var(--morning); }
@@ -98,7 +99,7 @@
   .chart-name { font-size: 11pt; padding-left: 1.5mm !important; }
   .chart-food, .chart-note { font-size: 8.5pt; }
   .chart-cell { font-size: 7.5pt; }
-  .pill-mark { width: 5mm; height: 3mm; }
+  .dose-icon { width: 5.5mm; height: 5.5mm; }
   .card-example-tag { font-size: 1rem; padding: 0.4rem 0.9rem; }
 }
 

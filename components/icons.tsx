@@ -1,4 +1,5 @@
-import type { Food, Time } from "@/lib/types";
+import { doseIcons, type DoseShape } from "@/lib/dose";
+import type { Food, Time, Unit } from "@/lib/types";
 
 type P = { className?: string };
 const stroke = { fill: "none", stroke: "currentColor", strokeWidth: 2.4, strokeLinecap: "round", strokeLinejoin: "round" } as const;
@@ -110,24 +111,68 @@ export function FoodMark({ food, className }: { food: Food; className?: string }
   );
 }
 
-/** One mark per tablet or capsule (up to 4), a half mark for ½. */
-export function PillMarks({ amount, className }: { amount: number; className?: string }) {
-  const whole = Math.min(Math.floor(amount), 4);
-  const half = amount % 1 >= 0.5 && whole < 4;
-  if (whole === 0 && !half) return null;
+const INK = "#1F2328";
+
+/** One picture per tablet, capsule, drop, puff or sachet (up to 4, then "+N"); a half tablet is half a circle. */
+export function DoseIcons({ amount, unit }: { amount: number; unit: Unit }) {
+  const { shape, whole, half, more } = doseIcons(amount, unit);
+  if (!whole && !half) return null;
   return (
-    <span className={className} aria-hidden>
+    <span className="dose-icons" aria-hidden>
       {Array.from({ length: whole }, (_, i) => (
-        <svg key={i} viewBox="0 0 20 12" className="pill-mark">
-          <rect x="1" y="1" width="18" height="10" rx="5" fill="#fff" stroke="currentColor" strokeWidth={1.8} />
-          <path d="M10 1v10" stroke="currentColor" strokeWidth={1.8} />
-        </svg>
+        <DoseShapeIcon key={i} shape={shape} />
       ))}
-      {half && (
-        <svg viewBox="0 0 20 12" className="pill-mark">
-          <path d="M10 1H6a5 5 0 0 0 0 10h4z" fill="#fff" stroke="currentColor" strokeWidth={1.8} />
-        </svg>
-      )}
+      {half && <HalfTablet />}
+      {more > 0 && <span className="dose-more">+{more}</span>}
     </span>
+  );
+}
+
+function DoseShapeIcon({ shape }: { shape: DoseShape }) {
+  const s = { stroke: INK, strokeWidth: 1.8, strokeLinejoin: "round" as const };
+  return (
+    <svg viewBox="0 0 24 24" className="dose-icon">
+      {shape === "tablet" && (
+        <>
+          <circle cx="12" cy="12" r="9" fill="#fff" {...s} />
+          <path d="M12 4.5v15" {...s} strokeWidth={1.4} />
+        </>
+      )}
+      {shape === "capsule" && (
+        <g transform="rotate(-35 12 12)">
+          <path d="M12 6.5H8a5.5 5.5 0 0 0 0 11h4z" fill="#E9C46A" {...s} />
+          <path d="M12 6.5h4a5.5 5.5 0 0 1 0 11h-4z" fill="#fff" {...s} />
+        </g>
+      )}
+      {shape === "drop" && <path d="M12 3.5C9 8 6.5 11 6.5 14.5a5.5 5.5 0 0 0 11 0C17.5 11 15 8 12 3.5z" fill="#BFE0F0" {...s} />}
+      {shape === "cup" && (
+        <>
+          <path d="M6 5h12l-1.5 14.5a1.5 1.5 0 0 1-1.5 1.5H9a1.5 1.5 0 0 1-1.5-1.5z" fill="#fff" {...s} />
+          <path d="M7.2 12h9.6l-.8 8H8z" fill="#E8A87C" stroke="none" />
+          <path d="M6 5h12l-1.5 14.5a1.5 1.5 0 0 1-1.5 1.5H9a1.5 1.5 0 0 1-1.5-1.5z" fill="none" {...s} />
+          <path d="M9 9h3M9 12h3M9 15h3" {...s} strokeWidth={1.2} />
+        </>
+      )}
+      {shape === "puff" && (
+        <>
+          <path d="M9 3h6v9H9z" fill="#9FB8C4" {...s} />
+          <path d="M7 11h10v6a3 3 0 0 1-3 3h-4a3 3 0 0 1-3-3z" fill="#fff" {...s} />
+        </>
+      )}
+      {shape === "sachet" && (
+        <path d="M5 6l2-2 2 2 2-2 2 2 2-2 2 2 2-2v16H5z" fill="#fff" {...s} />
+      )}
+      {shape === "dose" && <circle cx="12" cy="12" r="8" fill="#fff" {...s} />}
+    </svg>
+  );
+}
+
+/** Half a tablet, with the missing half dotted so "half" reads at a glance. */
+function HalfTablet() {
+  return (
+    <svg viewBox="0 0 24 24" className="dose-icon">
+      <path d="M12 3a9 9 0 0 1 0 18" fill="none" stroke={INK} strokeWidth={1.2} strokeDasharray="2 2" />
+      <path d="M12 3a9 9 0 0 0 0 18z" fill="#fff" stroke={INK} strokeWidth={1.8} strokeLinejoin="round" />
+    </svg>
   );
 }

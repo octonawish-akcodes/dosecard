@@ -1,7 +1,7 @@
 import { buildChart, cardName } from "@/lib/card";
 import { ENGLISH, amountText, labels, type Labels } from "@/lib/translations";
 import type { LangCode, Medicine } from "@/lib/types";
-import { FoodMark, PillMarks, TIME_ICON } from "./icons";
+import { DoseIcons, FoodMark, TIME_ICON } from "./icons";
 
 type Props = {
   medicines: Medicine[];
@@ -75,7 +75,7 @@ function Chart({ medicines, l, lang }: Body) {
               <td key={t} className={`chart-cell chart-c-${t}`}>
                 {m.times.includes(t) ? (
                   <span className="chart-dose">
-                    {(m.unit === "tablet" || m.unit === "capsule") && <PillMarks amount={m.amount} className="pill-marks" />}
+                    <DoseIcons amount={m.amount} unit={m.unit} />
                     <Amount m={m} l={l} lang={lang} />
                   </span>
                 ) : (

@@ -170,9 +170,10 @@ export function labels(lang: LangCode): Labels {
   return LABELS[lang] ?? ENGLISH;
 }
 
-/** "1 tablet", "2 tablets", "½ tablet", "5 ml" */
+/** "1 tablet", "2 tablets", "½ tablet", "1½ tablets", "5 ml" */
 export function amountText(l: Labels, amount: number, unit: Unit): string {
-  const n = amount === 0.5 ? "½" : String(amount);
+  const whole = Math.floor(amount);
+  const n = amount - whole === 0.5 ? `${whole || ""}½` : String(amount);
   const [one, many] = l.units[unit];
   return `${n} ${amount <= 1 ? one : many}`;
 }
