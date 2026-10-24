@@ -1,4 +1,4 @@
-import { buildCard, cardName } from "@/lib/card";
+import { buildChart, cardName } from "@/lib/card";
 import { ENGLISH, amountText, labels, type Labels } from "@/lib/translations";
 import type { LangCode, Medicine } from "@/lib/types";
 import { FoodMark, PillMarks, TIME_ICON } from "./icons";
@@ -29,9 +29,71 @@ function Bi({ pick, l, lang, className }: { pick: (l: Labels) => string; l: Labe
   );
 }
 
+type Body = { medicines: Medicine[]; l: Labels; lang: LangCode };
+
+const Amount = ({ m, l, lang }: { m: Medicine; l: Labels; lang: LangCode }) => (
+  <Bi pick={(x) => amountText(x, m.amount, m.unit)} l={l} lang={lang} />
+);
+const FoodWords = ({ m, l, lang }: { m: Medicine; l: Labels; lang: LangCode }) =>
+  m.food === "any" ? null : <Bi pick={(x) => x.food[m.food]} l={l} lang={lang} />;
+
+/** One row per medicine, a column per time of day; the dose sits in the column when it's due. */
+function Chart({ medicines, l, lang }: Body) {
+  const { cols, rows } = buildChart(medicines);
+  return (
+    <table className="chart">
+      <thead>
+        <tr>
+          <th className="chart-name-h">
+            <span className="sr-only">Medicine</span>
+          </th>
+          {cols.map((t) => {
+            const Icon = TIME_ICON[t];
+            return (
+              <th key={t} className={`chart-h chart-h-${t}`}>
+                <Icon className="chart-icon" />
+                <Bi pick={(x) => x.times[t]} l={l} lang={lang} />
+              </th>
+            );
+          })}
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((m) => (
+          <tr key={m.id}>
+            <th scope="row" className="chart-name">
+              {cardName(m.name)}
+              {m.food !== "any" && (
+                <span className="chart-food">
+                  <FoodMark food={m.food} className="chart-food-mark" />
+                  <FoodWords m={m} l={l} lang={lang} />
+                </span>
+              )}
+              {m.note.trim() && <span className="chart-note">{m.note.trim()}</span>}
+            </th>
+            {cols.map((t) => (
+              <td key={t} className={`chart-cell chart-c-${t}`}>
+                {m.times.includes(t) ? (
+                  <span className="chart-dose">
+                    {(m.unit === "tablet" || m.unit === "capsule") && <PillMarks amount={m.amount} className="pill-marks" />}
+                    <Amount m={m} l={l} lang={lang} />
+                  </span>
+                ) : (
+                  <span className="chart-dash" aria-label="none">
+                    —
+                  </span>
+                )}
+              </td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+}
+
 export function Card({ medicines, lang, patient, phone, made, example }: Props) {
   const l = labels(lang);
-  const rows = buildCard(medicines);
   return (
     <article id="card" className={`card ${example ? "card-example" : ""}`} aria-label="Medicine card preview">
       <header className="card-head">
@@ -39,35 +101,7 @@ export function Card({ medicines, lang, patient, phone, made, example }: Props) 
         {patient.trim() && <p className="card-patient">{patient.trim()}</p>}
       </header>
 
-      {rows.map((row) => {
-        const Icon = TIME_ICON[row.time];
-        return (
-          <section key={row.time} className={`band band-${row.time}`}>
-            <div className="band-label">
-              <Icon className="band-icon" />
-              <Bi pick={(x) => x.times[row.time]} l={l} lang={lang} className="band-name" />
-            </div>
-            <ul className="tiles">
-              {row.medicines.map((m) => (
-                <li key={m.id} className="tile">
-                  <p className="tile-name">{cardName(m.name)}</p>
-                  <p className="tile-amount">
-                    {(m.unit === "tablet" || m.unit === "capsule") && <PillMarks amount={m.amount} className="pill-marks" />}
-                    <Bi pick={(x) => amountText(x, m.amount, m.unit)} l={l} lang={lang} />
-                  </p>
-                  {m.food !== "any" && (
-                    <p className="tile-food">
-                      <FoodMark food={m.food} className="food-mark" />
-                      <Bi pick={(x) => x.food[m.food]} l={l} lang={lang} />
-                    </p>
-                  )}
-                  {m.note.trim() && <p className="tile-note">{m.note.trim()}</p>}
-                </li>
-              ))}
-            </ul>
-          </section>
-        );
-      })}
+      <Chart medicines={medicines} l={l} lang={lang} />
 
       <footer className="card-foot">
         {phone.trim() && (

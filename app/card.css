@@ -49,51 +49,6 @@
 .card-title .bi-local { font-family: inherit; font-size: 16pt; }
 .card-patient { font-size: 18pt; font-weight: 700; text-align: right; }
 
-.band {
-  display: grid;
-  grid-template-columns: 34mm 1fr;
-  gap: 4mm;
-  border-radius: 4mm;
-  padding: 4mm;
-  break-inside: avoid;
-}
-.band-morning { background: var(--morning); }
-.band-afternoon { background: var(--afternoon); }
-.band-evening { background: var(--evening); }
-.band-night { background: var(--night); color: #fff; }
-.band-night .bi-local { color: #fff; }
-.band-needed { background: var(--needed); }
-
-.band-label { display: flex; flex-direction: column; align-items: flex-start; gap: 1.5mm; }
-.band-icon { width: 17mm; height: 17mm; }
-.band-name { font-size: 15pt; font-weight: 700; }
-
-.tiles {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(52mm, 1fr));
-  gap: 3mm;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.tile {
-  background: #fff;
-  color: var(--ink);
-  border: 1.5px solid color-mix(in srgb, var(--ink) 18%, transparent);
-  border-radius: 3mm;
-  padding: 3mm 3.5mm;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5mm;
-}
-.tile .bi-local { color: var(--ink); }
-.tile-name { font-size: 19pt; font-weight: 700; line-height: 1.1; overflow-wrap: anywhere; }
-.tile-amount, .tile-food { display: flex; align-items: center; gap: 2.5mm; font-size: 12.5pt; }
-.tile-note { font-size: 11.5pt; font-weight: 700; color: var(--ink); border-top: 1px dashed var(--line); padding-top: 1.5mm; }
-.pill-marks { display: inline-flex; gap: 1mm; flex-shrink: 0; }
-.pill-mark { width: 7mm; height: 4.2mm; }
-.food-mark { height: 7mm; width: auto; flex-shrink: 0; }
-
 .card-foot {
   border-top: 1.5px solid var(--line);
   padding-top: 3mm;
@@ -105,3 +60,27 @@
 .card-call strong { font-size: 18pt; }
 .card-small { font-size: 9.5pt; color: var(--muted); }
 .card-small .bi-local { color: var(--muted); font-weight: 400; }
+
+/* ---- Tick chart: medicines down, times across ---- */
+.chart { width: 100%; border-collapse: collapse; table-layout: fixed; }
+.chart th, .chart td { border: 1px solid var(--line); padding: 2.5mm; text-align: center; vertical-align: middle; }
+.chart-name-h { width: 34%; border-top-color: transparent !important; border-left-color: transparent !important; }
+.chart-h { font-size: 12pt; font-weight: 700; }
+.chart-icon { width: 10mm; height: 10mm; display: block; margin: 0 auto 1mm; }
+.chart-h .bi { align-items: center; }
+.chart-name { text-align: left !important; font-size: 15pt; font-weight: 700; }
+.chart-food { display: flex; align-items: center; gap: 2mm; font-size: 11pt; font-weight: 400; margin-top: 1.5mm; }
+.chart-food-mark { height: 6mm; width: auto; flex-shrink: 0; }
+.chart-note { display: block; font-size: 10.5pt; font-weight: 700; margin-top: 1mm; }
+.chart-dose { display: inline-flex; flex-direction: column; align-items: center; gap: 1mm; }
+.pill-marks { display: inline-flex; gap: 1mm; }
+.pill-mark { width: 7mm; height: 4.2mm; }
+.chart-cell { font-size: 12.5pt; font-weight: 700; }
+.chart-cell .bi { align-items: center; }
+.chart-c-morning:has(.bi) { background: var(--morning); }
+.chart-c-afternoon:has(.bi) { background: var(--afternoon); }
+.chart-c-evening:has(.bi) { background: var(--evening); }
+.chart-c-night:has(.bi) { background: var(--night); color: #fff; }
+.chart-c-night .bi-local { color: #fff; }
+.chart-dash { color: var(--line); font-weight: 400; }
+.chart-c-needed:has(.bi) { background: var(--needed); }

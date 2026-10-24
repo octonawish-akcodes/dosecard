@@ -1,7 +1,5 @@
 import { TIMES, type Medicine, type Time } from "./types";
 
-export type CardRow = { time: Time; medicines: Medicine[] };
-
 const named = (m: Medicine) => m.name.trim().length > 0;
 
 /** A named medicine with no time can't go on the card until the family member picks one. */
@@ -9,12 +7,11 @@ export function needsTime(m: Medicine): boolean {
   return named(m) && m.times.length === 0;
 }
 
-/** Turns the medicine list into the card's time-of-day rows: fixed order, empty rows left out. */
-export function buildCard(medicines: Medicine[]): CardRow[] {
-  const ready = medicines.filter((m) => named(m) && m.times.length > 0);
-  return TIMES.map((time) => ({ time, medicines: ready.filter((m) => m.times.includes(time)) })).filter(
-    (row) => row.medicines.length > 0,
-  );
+/** The tick chart: one row per ready medicine, a column per time of day ("when needed" only if used). */
+export function buildChart(medicines: Medicine[]): { cols: Time[]; rows: Medicine[] } {
+  const rows = medicines.filter((m) => named(m) && m.times.length > 0);
+  const cols = TIMES.filter((t) => t !== "needed" || rows.some((m) => m.times.includes("needed")));
+  return { cols, rows };
 }
 
 const FORM_PREFIX = /^(tab|tabs|cap|caps|syp|syr|inj|oint|susp)\.?\s+(?=\S)/i;

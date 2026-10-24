@@ -73,7 +73,7 @@ Build mode: fast (the learner asked for the fewest rounds; hands-on checks are s
 
 ## Hands-on Checkpoints
 
-- [ ] Early usable behavior explored — after slice 2: sample prescription → list → card
+- [x] Early usable behavior explored — after slice 2: sample prescription → list → card. Feedback: design too complex → tick chart chosen (see Revisions)
 - [ ] Final kick-the-tires exploration and feedback completed
 
 ## Final Review
@@ -93,3 +93,4 @@ Reflection:
 Activity mode:
 
 ## Revisions
+- Card design changed from picture tiles in time-of-day bands to a tick chart (medicines down the side, times across). At the first hands-on check the learner said the design "looks very complex" and asked for easy options. They chose the tick chart from four rendered designs. `buildCard` was replaced by `buildChart`; PRD > The card and spec > Card preview were updated.

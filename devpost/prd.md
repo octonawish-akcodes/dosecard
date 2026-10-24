@@ -29,7 +29,7 @@ One screen, two panels:
 Source: `scope.md > Inspiration & Identity`.
 - **Feel:** warm, calm and very legible, like a well-designed hospital wayfinding sign, not a tech app. Never generic AI-app styling: no purple gradients, no glassy cards, no emoji as icons.
 - **Paper:** an off-white, warm background, with dark ink text at high contrast.
-- **Time rows:** each has its own soft colour and a simple drawn picture, so the grandparent can find "now" by colour alone. Morning is sunrise peach, Afternoon is sun yellow, Evening is dusk coral, Night is deep indigo with a moon.
+- **Card layout: a tick chart (chosen by the learner after the first hands-on check, when the first tile design "looks very complex").** Medicines go down the side and the times of day go across as columns, each with its own picture. The dose appears in a coloured box under the time it's due. Morning is sunrise peach, Afternoon sun yellow, Evening dusk coral, Night deep indigo with a moon, so the grandparent can find "now" by colour alone.
 - **Type:** big and rounded, with medicine names in bold. The card must stay readable from about an arm's length away. Every chosen language is shown in its own script.
 - **Food markers:** a plate with an arrow, meaning before food or after food, plus the words.
 - **The app panel:** quiet and plain, so the card is the star.
@@ -58,12 +58,12 @@ Source: `scope.md > The POC Boundary`.
 ### The card
 Source: `scope.md > The Unique Kernel`.
 - As a grandparent, I want to look at the card and know what to take now, without asking anyone.
-  - [ ] Four time-of-day rows (Morning, Afternoon, Evening, Night), each with its picture and colour. A medicine taken twice a day appears in both rows.
-  - [ ] An "Only when needed" row appears only if a medicine needs it.
-  - [ ] Each medicine shows its name in large bold type, the amount (e.g. "1 tablet", with that many pill marks), and the food marker.
+  - [ ] Four time-of-day columns (Morning, Afternoon, Evening, Night), each with its picture. A medicine taken twice a day shows its dose in both columns, coloured by time.
+  - [ ] An "Only when needed" column appears only if a medicine needs it.
+  - [ ] Each medicine row shows its name in large bold type, without "Tab."/"Cap.", plus the food marker. The dose cell shows the amount (e.g. "1 tablet", with that many pill marks).
   - [ ] Row titles, amounts, units and food words appear in English **and** the chosen language. Medicine names stay as printed on the box.
   - [ ] The header shows the patient's name if given. The footer shows "If unsure, call …" if a phone number is given, the date the card was made, and "Copied from the prescription. Check with your doctor or pharmacist."
-  - [ ] Empty time rows are left out so the card stays uncluttered.
+  - [ ] Times with no dose show a faint dash, so the chart stays easy to scan.
   - [ ] Print shows only the card, fitting on one A4 page for up to about 8 medicines.
 
 ### Languages

@@ -85,7 +85,7 @@ Carried from `prd.md > Look and Feel`.
 
 **Pictures:** hand-drawn-style inline SVG icons in `icons.tsx`: sunrise, sun, sunset, moon, a plate with an arrow (before or after food), and a pill mark. No emoji, no icon library.
 
-**Card layout:** one row per time of day, as a full-width band with its icon at left (about 64 px), the time label in both languages, then the medicine "tiles". Generous spacing, thin rounded borders, and no shadows on the card.
+**Card layout:** a tick chart (an HTML table). Medicines go down the side; the time-of-day columns each have an icon and a bilingual label; the dose sits in a time-coloured cell. "When needed" is a column only when used. Thin borders, no shadows. The learner chose this over three other designs.
 
 **App copy:** plain and warm, written to the family member. For example: "Check each medicine against the paper."
 
@@ -132,7 +132,7 @@ Carried from `prd.md > Look and Feel`.
 
 ### Card preview
 - Implements `prd.md > The card` and `prd.md > States and Boundaries` (first visit).
-- `buildCard(medicines, lang)` is a pure function in `lib/card.ts`. It returns the ordered time rows with their tiles, leaving out empty rows and rows that have no time.
+- `buildChart(medicines)` is a pure function in `lib/card.ts`. It returns the chart's columns (the four times, plus "needed" only if used) and its rows (named medicines that have a time). `cardName()` drops the "Tab."/"Cap." prefix for display.
 - `<Card>` renders that result, setting `lang` and `dir` on the bilingual labels so Urdu and Arabic read right to left.
 - On first visit it shows a faint example card with "Your card appears here".
 - On a phone, the "See card" button scrolls to the preview.
@@ -191,7 +191,7 @@ dosecard/
 │   └── icons.tsx           # sunrise, sun, sunset, moon, plate, pill SVGs
 ├── lib/
 │   ├── types.ts            # Medicine, AppState, Time, Food, Unit
-│   ├── card.ts             # buildCard(): rows → ordered time bands
+│   ├── card.ts             # buildChart(): medicines → tick-chart rows and columns
 │   ├── translations.ts     # 16 languages of fixed labels
 │   ├── read.ts             # browser: shrink image, call /api/read
 │   ├── reader.ts           # server: prompt, zod schema, model fallback
