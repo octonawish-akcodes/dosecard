@@ -1,4 +1,5 @@
-import type { Unit } from "./types";
+import { buildChart } from "./card";
+import type { Medicine, Unit } from "./types";
 
 export type DoseShape = "tablet" | "capsule" | "drop" | "cup" | "puff" | "sachet" | "dose";
 
@@ -23,4 +24,19 @@ export function doseIcons(amount: number, unit: Unit): { shape: DoseShape; whole
   const half = shape === "tablet" && amount - count >= 0.5;
   const whole = Math.min(count, MAX);
   return { shape, whole, half, more: count - whole };
+}
+
+export type LegendKey = "food-before" | "food-after" | "food-with" | Exclude<DoseShape, "dose"> | "half";
+const ORDER: LegendKey[] = ["food-before", "food-after", "food-with", "tablet", "half", "capsule", "drop", "cup", "puff", "sachet"];
+
+/** The pictures the card actually shows, so the key explains those and nothing else. */
+export function legendKeys(medicines: Medicine[]): LegendKey[] {
+  const used = new Set<LegendKey>();
+  for (const m of buildChart(medicines).rows) {
+    if (m.food !== "any") used.add(`food-${m.food}`);
+    const d = doseIcons(m.amount, m.unit);
+    if (d.whole && d.shape !== "dose") used.add(d.shape);
+    if (d.half) used.add("half");
+  }
+  return ORDER.filter((k) => used.has(k));
 }

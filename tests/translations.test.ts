@@ -13,7 +13,7 @@ describe("translations", () => {
   it("gives every language every label, none empty", () => {
     for (const [code, l] of Object.entries(LABELS)) {
       const strings = [
-        l.name, l.title, l.call, l.made, l.disclaimer,
+        l.name, l.title, l.call, l.made, l.disclaimer, l.key,
         ...TIMES.map((t) => l.times[t]),
         ...FOODS.map((f) => l.food[f]),
         ...UNITS.flatMap((u) => l.units[u]),

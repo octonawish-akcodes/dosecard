@@ -86,6 +86,16 @@
 .chart-dash { color: var(--line); font-weight: 400; }
 .chart-c-needed:has(.bi) { background: var(--needed); }
 
+/* ---- Picture key ---- */
+.picture-key { border: 1.5px solid var(--line); border-radius: 3mm; padding: 2.5mm 3.5mm; break-inside: avoid; }
+.key-title { font-size: 11pt; font-weight: 700; margin-bottom: 1.5mm; }
+.key-items { display: flex; flex-wrap: wrap; gap: 2mm 6mm; list-style: none; margin: 0; padding: 0; }
+.key-item { display: flex; align-items: center; gap: 2mm; font-size: 10.5pt; }
+.key-icon { display: inline-flex; flex-shrink: 0; }
+.key-item .bi-en::first-letter { text-transform: uppercase; }
+.key-icon .dose-icon { width: 7mm; height: 7mm; }
+.key-food { height: 6mm; width: auto; }
+
 /* ---- Phones: same chart, tighter ---- */
 @media screen and (max-width: 640px) {
   .card { padding: 4mm; border-radius: 4mm; }
@@ -101,6 +111,8 @@
   .chart-cell { font-size: 7.5pt; }
   .dose-icon { width: 5.5mm; height: 5.5mm; }
   .card-example-tag { font-size: 1rem; padding: 0.4rem 0.9rem; }
+  .key-item { font-size: 8.5pt; }
+  .key-title { font-size: 9pt; }
 }
 
 /* ---- Printing: only the card, on one A4 page ---- */

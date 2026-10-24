@@ -79,6 +79,7 @@ Build mode: fast (the learner asked for the fewest rounds; hands-on checks are s
 ## Final Review
 
 - [x] Feedback: "there is no icon to tell that have to take half meds or full tablet like quantity". Each dose cell now draws one picture per unit (round tablets, capsules, drops, a measuring cup for syrup, inhaler puffs, sachets), with a half tablet as half a circle and its missing half dotted; amounts read "1½ tablets". `lib/dose.ts` + `tests/dose.test.ts`; checked in Chrome with ½, 1½ and 2 tablets, capsule, syrup, drops, puffs and sachet.
+- [x] Feedback: "can u create a label to tell me what icon specify what thing". The card now ends with a bilingual "What the pictures mean" key listing only the pictures on that card (food markers, whole/half tablet, capsule, drop, ml cup, puff, sachet). `legendKeys()` in `lib/dose.ts` is tested. Printing also shrinks a tall card to fit one A4 page: 8 medicines + key print at 85% zoom, 258 mm of 273 mm.
 - [ ] Final review complete — feedback resolved and learner confirms ready to ship
 
 ## Code Tour and App Map

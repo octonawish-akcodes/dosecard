@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { doseIcons } from "@/lib/dose";
+import { doseIcons, legendKeys } from "@/lib/dose";
+import type { Medicine } from "@/lib/types";
 
 describe("doseIcons", () => {
   it("draws one whole tablet per tablet and a half for ½", () => {
@@ -22,5 +23,25 @@ describe("doseIcons", () => {
     expect(doseIcons(2, "puff").shape).toBe("puff");
     expect(doseIcons(1, "sachet").shape).toBe("sachet");
     expect(doseIcons(1, "other").shape).toBe("dose");
+  });
+});
+
+describe("legendKeys", () => {
+  const m = (amount: number, unit: Medicine["unit"], food: Medicine["food"], times: Medicine["times"] = ["morning"]) => ({
+    id: String(Math.random()), name: "X", amount, unit, food, times, note: "", unsure: {},
+  });
+
+  it("lists only the pictures used on the card, in a fixed order", () => {
+    expect(legendKeys([m(1, "tablet", "after"), m(0.5, "tablet", "any"), m(10, "ml", "before")])).toEqual([
+      "food-before", "food-after", "tablet", "half", "cup",
+    ]);
+  });
+
+  it("ignores medicines that aren't on the card", () => {
+    expect(legendKeys([m(1, "capsule", "with", []), m(2, "drops", "any")])).toEqual(["drop"]);
+  });
+
+  it("is empty when there's nothing to explain", () => {
+    expect(legendKeys([])).toEqual([]);
   });
 });

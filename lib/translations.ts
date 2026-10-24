@@ -16,6 +16,8 @@ export type Labels = {
   call: string;
   made: string;
   disclaimer: string;
+  /** Heading of the picture key at the foot of the card. */
+  key: string;
 };
 
 const L = (
@@ -38,6 +40,7 @@ const L = (
   call,
   made,
   disclaimer,
+  key: "",
 });
 
 export const LABELS: Record<LangCode, Labels> = {
@@ -156,6 +159,26 @@ export const LABELS: Record<LangCode, Labels> = {
     "Em caso de dúvida, ligue para", "Feito em", "Copiado da receita. Confirme com seu médico ou farmacêutico.",
   ),
 };
+
+const KEY: Record<LangCode, string> = {
+  en: "What the pictures mean",
+  hi: "चित्रों का मतलब",
+  bn: "ছবিগুলোর মানে",
+  mr: "चित्रांचा अर्थ",
+  te: "బొమ్మల అర్థం",
+  ta: "படங்களின் பொருள்",
+  gu: "ચિત્રોનો અર્થ",
+  kn: "ಚಿತ್ರಗಳ ಅರ್ಥ",
+  ml: "ചിത്രങ്ങളുടെ അർത്ഥം",
+  pa: "ਤਸਵੀਰਾਂ ਦਾ ਮਤਲਬ",
+  ur: "تصویروں کا مطلب",
+  es: "Qué significan los dibujos",
+  fr: "Ce que veulent dire les dessins",
+  ar: "معنى الصور",
+  zh: "图标说明",
+  pt: "O que os desenhos significam",
+};
+for (const code of Object.keys(LABELS) as LangCode[]) LABELS[code].key = KEY[code];
 
 /** The picker's groups, in display order. */
 export const LANGS: { group: string; codes: LangCode[] }[] = [

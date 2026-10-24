@@ -1,7 +1,8 @@
 import { buildChart, cardName } from "@/lib/card";
 import { ENGLISH, amountText, labels, type Labels } from "@/lib/translations";
 import type { LangCode, Medicine } from "@/lib/types";
-import { DoseIcons, FoodMark, TIME_ICON } from "./icons";
+import { legendKeys, type LegendKey } from "@/lib/dose";
+import { DoseIcons, DoseShapeIcon, FoodMark, HalfTablet, TIME_ICON } from "./icons";
 
 type Props = {
   medicines: Medicine[];
@@ -92,6 +93,48 @@ function Chart({ medicines, l, lang }: Body) {
   );
 }
 
+/** The picture and its words for one entry of the key. */
+function keyEntry(k: LegendKey): { icon: React.JSX.Element; pick: (l: Labels) => string } {
+  switch (k) {
+    case "food-before":
+    case "food-after":
+    case "food-with": {
+      const food = k === "food-before" ? "before" : k === "food-after" ? "after" : "with";
+      return { icon: <FoodMark food={food} className="key-food" />, pick: (l) => l.food[food] };
+    }
+    case "half":
+      return { icon: <HalfTablet />, pick: (l) => `½ ${l.units.tablet[0]}` };
+    case "cup":
+      return { icon: <DoseShapeIcon shape="cup" />, pick: (l) => l.units.ml[0] };
+    case "drop":
+      return { icon: <DoseShapeIcon shape="drop" />, pick: (l) => l.units.drops[0] };
+    default:
+      return { icon: <DoseShapeIcon shape={k} />, pick: (l) => l.units[k][0] };
+  }
+}
+
+/** Explains only the pictures this card uses. */
+function PictureKey({ medicines, l, lang }: Body) {
+  const keys = legendKeys(medicines);
+  if (!keys.length) return null;
+  return (
+    <section className="picture-key" aria-label="What the pictures mean">
+      <Bi pick={(x) => x.key} l={l} lang={lang} className="key-title" />
+      <ul className="key-items">
+        {keys.map((k) => {
+          const { icon, pick } = keyEntry(k);
+          return (
+            <li key={k} className="key-item">
+              <span className="key-icon">{icon}</span>
+              <Bi pick={pick} l={l} lang={lang} />
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  );
+}
+
 export function Card({ medicines, lang, patient, phone, made, example }: Props) {
   const l = labels(lang);
   return (
@@ -102,6 +145,7 @@ export function Card({ medicines, lang, patient, phone, made, example }: Props) 
       </header>
 
       <Chart medicines={medicines} l={l} lang={lang} />
+      <PictureKey medicines={medicines} l={l} lang={lang} />
 
       <footer className="card-foot">
         {phone.trim() && (

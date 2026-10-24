@@ -41,6 +41,25 @@ export function DoseCardApp() {
     if (restored) save(state);
   }, [restored, state]);
 
+  // A long list could spill onto a second page: shrink the card just enough to fit one A4 page.
+  useEffect(() => {
+    const A4_USABLE_MM = 297 - 24;
+    const fit = () => {
+      const card = document.getElementById("card");
+      if (!card) return;
+      card.style.zoom = "";
+      const mm = card.getBoundingClientRect().height / (96 / 25.4);
+      if (mm > A4_USABLE_MM) card.style.zoom = String(Math.max(0.6, A4_USABLE_MM / mm));
+    };
+    const reset = () => document.getElementById("card")?.style.removeProperty("zoom");
+    window.addEventListener("beforeprint", fit);
+    window.addEventListener("afterprint", reset);
+    return () => {
+      window.removeEventListener("beforeprint", fit);
+      window.removeEventListener("afterprint", reset);
+    };
+  }, []);
+
   const printButton = (
     <button type="button" className="btn w-full" disabled={empty} onClick={() => window.print()}>
       Print card

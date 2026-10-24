@@ -128,7 +128,7 @@ export function DoseIcons({ amount, unit }: { amount: number; unit: Unit }) {
   );
 }
 
-function DoseShapeIcon({ shape }: { shape: DoseShape }) {
+export function DoseShapeIcon({ shape }: { shape: DoseShape }) {
   const s = { stroke: INK, strokeWidth: 1.8, strokeLinejoin: "round" as const };
   return (
     <svg viewBox="0 0 24 24" className="dose-icon">
@@ -168,7 +168,7 @@ function DoseShapeIcon({ shape }: { shape: DoseShape }) {
 }
 
 /** Half a tablet, with the missing half dotted so "half" reads at a glance. */
-function HalfTablet() {
+export function HalfTablet() {
   return (
     <svg viewBox="0 0 24 24" className="dose-icon">
       <path d="M12 3a9 9 0 0 1 0 18" fill="none" stroke={INK} strokeWidth={1.2} strokeDasharray="2 2" />
