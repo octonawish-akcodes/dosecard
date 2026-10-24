@@ -1,5 +1,5 @@
 import { doseIcons, type DoseShape } from "@/lib/dose";
-import type { Food, Time, Unit } from "@/lib/types";
+import type { Time, Unit } from "@/lib/types";
 
 type P = { className?: string };
 const stroke = { fill: "none", stroke: "currentColor", strokeWidth: 2.4, strokeLinecap: "round", strokeLinejoin: "round" } as const;
@@ -63,50 +63,12 @@ export const TIME_ICON: Record<Time, (p: P) => React.JSX.Element> = {
   needed: Bottle,
 };
 
-function Plate({ x }: { x: number }) {
+/** A fork and spoon, shown on the food tag. */
+export function ForkSpoon({ className }: P) {
   return (
-    <g transform={`translate(${x} 0)`}>
-      <circle cx="14" cy="16" r="11" fill="#fff" stroke="currentColor" strokeWidth={2.2} />
-      <circle cx="14" cy="16" r="6" fill="none" stroke="currentColor" strokeWidth={1.6} />
-    </g>
-  );
-}
-
-function PillShape({ x, y = 10 }: { x: number; y?: number }) {
-  return (
-    <g transform={`translate(${x} ${y})`}>
-      <rect width="16" height="9" rx="4.5" fill="#fff" stroke="currentColor" strokeWidth={2} />
-      <path d="M8 0v9" stroke="currentColor" strokeWidth={2} />
-    </g>
-  );
-}
-
-/** Pill → plate (before), plate → pill (after), pill on plate (with). Nothing for "any time". */
-export function FoodMark({ food, className }: { food: Food; className?: string }) {
-  if (food === "any") return null;
-  if (food === "with")
-    return (
-      <svg viewBox="0 0 28 32" className={className} aria-hidden>
-        <Plate x={0} />
-        <PillShape x={6} y={11.5} />
-      </svg>
-    );
-  const arrow = <path d="M22 15.5h10M28 11.5l4 4-4 4" {...stroke} strokeWidth={2} />;
-  return (
-    <svg viewBox="0 0 64 32" className={className} aria-hidden>
-      {food === "before" ? (
-        <>
-          <PillShape x={2} y={11} />
-          <g transform="translate(-2 0)">{arrow}</g>
-          <Plate x={36} />
-        </>
-      ) : (
-        <>
-          <Plate x={0} />
-          <g transform="translate(6 0)">{arrow}</g>
-          <PillShape x={44} y={11} />
-        </>
-      )}
+    <svg viewBox="0 0 24 24" className={className} aria-hidden>
+      <path d="M7 3v6a2 2 0 0 0 2 2v10M11 3v6a2 2 0 0 1-2 2M9 3v5" {...stroke} strokeWidth={1.8} />
+      <path d="M16 3c-2 0-3 2.5-3 5s1.2 3.5 3 3.5V21M16 11.5c1.8 0 3-1 3-3.5S18 3 16 3" {...stroke} strokeWidth={1.8} />
     </svg>
   );
 }

@@ -32,9 +32,7 @@ describe("legendKeys", () => {
   });
 
   it("lists only the pictures used on the card, in a fixed order", () => {
-    expect(legendKeys([m(1, "tablet", "after"), m(0.5, "tablet", "any"), m(10, "ml", "before")])).toEqual([
-      "food-before", "food-after", "tablet", "half", "cup",
-    ]);
+    expect(legendKeys([m(1, "tablet", "after"), m(0.5, "tablet", "any"), m(10, "ml", "before")])).toEqual(["tablet", "half", "cup"]);
   });
 
   it("ignores medicines that aren't on the card", () => {

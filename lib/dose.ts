@@ -26,14 +26,14 @@ export function doseIcons(amount: number, unit: Unit): { shape: DoseShape; whole
   return { shape, whole, half, more: count - whole };
 }
 
-export type LegendKey = "food-before" | "food-after" | "food-with" | Exclude<DoseShape, "dose"> | "half";
-const ORDER: LegendKey[] = ["food-before", "food-after", "food-with", "tablet", "half", "capsule", "drop", "cup", "puff", "sachet"];
+// Food timing isn't in the key: its tag on the card already spells it out in words.
+export type LegendKey = Exclude<DoseShape, "dose"> | "half";
+const ORDER: LegendKey[] = ["tablet", "half", "capsule", "drop", "cup", "puff", "sachet"];
 
 /** The pictures the card actually shows, so the key explains those and nothing else. */
 export function legendKeys(medicines: Medicine[]): LegendKey[] {
   const used = new Set<LegendKey>();
   for (const m of buildChart(medicines).rows) {
-    if (m.food !== "any") used.add(`food-${m.food}`);
     const d = doseIcons(m.amount, m.unit);
     if (d.whole && d.shape !== "dose") used.add(d.shape);
     if (d.half) used.add("half");

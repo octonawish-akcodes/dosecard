@@ -2,7 +2,7 @@ import { buildChart, cardName } from "@/lib/card";
 import { ENGLISH, amountText, labels, type Labels } from "@/lib/translations";
 import type { LangCode, Medicine } from "@/lib/types";
 import { legendKeys, type LegendKey } from "@/lib/dose";
-import { DoseIcons, DoseShapeIcon, FoodMark, HalfTablet, TIME_ICON } from "./icons";
+import { DoseIcons, DoseShapeIcon, ForkSpoon, HalfTablet, TIME_ICON } from "./icons";
 
 type Props = {
   medicines: Medicine[];
@@ -65,8 +65,8 @@ function Chart({ medicines, l, lang }: Body) {
             <th scope="row" className="chart-name">
               {cardName(m.name)}
               {m.food !== "any" && (
-                <span className="chart-food">
-                  <FoodMark food={m.food} className="chart-food-mark" />
+                <span className={`food-tag food-${m.food}`}>
+                  <ForkSpoon className="food-icon" />
                   <FoodWords m={m} l={l} lang={lang} />
                 </span>
               )}
@@ -96,12 +96,6 @@ function Chart({ medicines, l, lang }: Body) {
 /** The picture and its words for one entry of the key. */
 function keyEntry(k: LegendKey): { icon: React.JSX.Element; pick: (l: Labels) => string } {
   switch (k) {
-    case "food-before":
-    case "food-after":
-    case "food-with": {
-      const food = k === "food-before" ? "before" : k === "food-after" ? "after" : "with";
-      return { icon: <FoodMark food={food} className="key-food" />, pick: (l) => l.food[food] };
-    }
     case "half":
       return { icon: <HalfTablet />, pick: (l) => `½ ${l.units.tablet[0]}` };
     case "cup":

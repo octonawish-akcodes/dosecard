@@ -69,8 +69,24 @@
 .chart-icon { width: 10mm; height: 10mm; display: block; margin: 0 auto 1mm; }
 .chart-h .bi { align-items: center; }
 .chart-name { text-align: left !important; font-size: 15pt; font-weight: 700; padding-left: 2.5mm !important; overflow-wrap: normal !important; }
-.chart-food { display: flex; align-items: center; gap: 2mm; font-size: 11pt; font-weight: 400; margin-top: 1.5mm; }
-.chart-food-mark { height: 6mm; width: auto; flex-shrink: 0; }
+.food-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5mm;
+  margin-top: 1.5mm;
+  padding: 0.8mm 2.5mm 0.8mm 1.5mm;
+  border-radius: 999px;
+  border: 1.5px solid currentColor;
+  font-size: 10.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.food-tag .bi-local { text-transform: none; letter-spacing: 0; color: inherit; }
+.food-before { background: #fff1d6; color: #8a4b00; }
+.food-after { background: #e3f4e6; color: #1f6a35; }
+.food-with { background: #eef0f2; color: #3c4650; }
+.food-icon { width: 5.5mm; height: 5.5mm; flex-shrink: 0; }
 .chart-note { display: block; font-size: 10.5pt; font-weight: 700; margin-top: 1mm; }
 .chart-dose { display: inline-flex; flex-direction: column; align-items: center; gap: 1mm; }
 .dose-icons { display: inline-flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.8mm; }
@@ -94,7 +110,6 @@
 .key-icon { display: inline-flex; flex-shrink: 0; }
 .key-item .bi-en::first-letter { text-transform: uppercase; }
 .key-icon .dose-icon { width: 7mm; height: 7mm; }
-.key-food { height: 6mm; width: auto; }
 
 /* ---- Phones: same chart, tighter ---- */
 @media screen and (max-width: 640px) {
@@ -107,7 +122,8 @@
   .chart-h .bi-local { overflow-wrap: anywhere; }
   .chart-icon { width: 7mm; height: 7mm; }
   .chart-name { font-size: 11pt; padding-left: 1.5mm !important; }
-  .chart-food, .chart-note { font-size: 8.5pt; }
+  .food-tag, .chart-note { font-size: 7.5pt; }
+  .food-icon { width: 4mm; height: 4mm; }
   .chart-cell { font-size: 7.5pt; }
   .dose-icon { width: 5.5mm; height: 5.5mm; }
   .card-example-tag { font-size: 1rem; padding: 0.4rem 0.9rem; }

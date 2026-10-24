@@ -31,7 +31,7 @@ Source: `scope.md > Inspiration & Identity`.
 - **Paper:** an off-white, warm background, with dark ink text at high contrast.
 - **Card layout: a tick chart (chosen by the learner after the first hands-on check, when the first tile design "looks very complex").** Medicines go down the side and the times of day go across as columns, each with its own picture. The dose appears in a coloured box under the time it's due. Morning is sunrise peach, Afternoon sun yellow, Evening dusk coral, Night deep indigo with a moon, so the grandparent can find "now" by colour alone.
 - **Type:** big and rounded, with medicine names in bold. The card must stay readable from about an arm's length away. Every chosen language is shown in its own script.
-- **Food markers:** a plate with an arrow, meaning before food or after food, plus the words.
+- **Food timing:** a coloured tag with a fork-and-spoon picture and the words in both languages: amber BEFORE FOOD, green AFTER FOOD, grey WITH FOOD. Changed at final review; the earlier pill/plate arrows were "complicated to understand".
 - **The app panel:** quiet and plain, so the card is the star.
 
 ## Features and Behavior
