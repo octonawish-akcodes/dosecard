@@ -2,7 +2,7 @@ import { readPrescription } from "@/lib/reader";
 import type { Medicine } from "@/lib/types";
 import saved from "@/public/sample/reading.json";
 
-export const maxDuration = 60;
+export const maxDuration = 120;
 
 const MAX_BYTES = 4 * 1024 * 1024;
 const TYPES = new Set(["image/jpeg", "image/png", "image/webp", "image/heic", "image/heif"]);
@@ -22,10 +22,11 @@ export async function POST(req: Request) {
   if (!TYPES.has(file.type)) return Response.json({ error: "That file isn't a photo." }, { status: 400 });
   if (file.size > MAX_BYTES) return Response.json({ error: "That photo is too large." }, { status: 413 });
 
-  const key = process.env.GOOGLE_GENERATIVE_AI_API_KEY;
-  if (!key) return sample ? fallback() : Response.json({ error: "The reader isn't set up." }, { status: 503 });
+  const key = process.env.GOOGLE_GENERATIVE_AI_API_KEY ?? "";
+  const claudeKey = process.env.ANTHROPIC_API_KEY;
+  if (!key && !claudeKey) return sample ? fallback() : Response.json({ error: "The reader isn't set up." }, { status: 503 });
   try {
-    const medicines = await readPrescription(new Uint8Array(await file.arrayBuffer()), file.type, key);
+    const medicines = await readPrescription(new Uint8Array(await file.arrayBuffer()), file.type, key, claudeKey);
     return Response.json({ medicines, source: "live" });
   } catch {
     return sample ? fallback() : Response.json({ error: "The reader is unavailable right now." }, { status: 503 });

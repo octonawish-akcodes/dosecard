@@ -22,7 +22,7 @@ async function reading(rx: Rx): Promise<Raw> {
   const image = new Uint8Array(readFileSync(`public/evidence/${rx.id}.jpg`));
   for (let attempt = 1; ; attempt++) {
     try {
-      const { medicines, model } = await readWithModel(image, "image/jpeg", key);
+      const { medicines, model } = await readWithModel(image, "image/jpeg", key, process.env.ANTHROPIC_API_KEY);
       const raw = { model, readAt: new Date().toISOString(), medicines };
       writeFileSync(file, JSON.stringify(raw, null, 1));
       return raw;

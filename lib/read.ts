@@ -28,7 +28,7 @@ export async function readPhoto(photo: Blob, sample = false): Promise<ReadOutcom
   if (sample) body.append("sample", "1");
   let res: Response;
   try {
-    res = await fetch("/api/read", { method: "POST", body, signal: AbortSignal.timeout(45_000) });
+    res = await fetch("/api/read", { method: "POST", body, signal: AbortSignal.timeout(90_000) });
   } catch {
     throw new ReadError("unavailable");
   }

@@ -1,3 +1,4 @@
+import { createAnthropic } from "@ai-sdk/anthropic";
 import { createGoogleGenerativeAI } from "@ai-sdk/google";
 import { generateText, Output } from "ai";
 import { z } from "zod";
@@ -22,6 +23,8 @@ export const ReadResult = z.object({
 export type ReadResult = z.infer<typeof ReadResult>;
 
 export const MODELS = ["gemini-3.5-flash", "gemini-3-flash-preview", "gemini-3.1-flash-lite"];
+/** Last resort when every Gemini model is busy or out of quota, used only if an Anthropic key is set. */
+export const CLAUDE_MODEL = "claude-sonnet-5-5";
 
 export const PROMPT = `You copy medicines from a photo of a prescription so a family member can make a timetable for an elderly patient.
 Rules:
@@ -67,18 +70,25 @@ export async function tryInTurn<T>(ids: string[], call: (id: string) => Promise<
   throw last;
 }
 
-/** Sends one image to Gemini and returns validated rows. Never logs the image or the result. */
-export async function readPrescription(image: Uint8Array, mediaType: string, apiKey: string): Promise<Medicine[]> {
-  return (await readWithModel(image, mediaType, apiKey)).medicines;
+/** Sends one image to Gemini (then Claude, if a key is given) and returns validated rows. Never logs the image or the result. */
+export async function readPrescription(image: Uint8Array, mediaType: string, apiKey: string, anthropicKey?: string): Promise<Medicine[]> {
+  return (await readWithModel(image, mediaType, apiKey, anthropicKey)).medicines;
 }
 
 /** Same as readPrescription, also saying which model answered (the evaluation records it). */
-export async function readWithModel(image: Uint8Array, mediaType: string, apiKey: string): Promise<{ medicines: Medicine[]; model: string }> {
+export async function readWithModel(
+  image: Uint8Array,
+  mediaType: string,
+  apiKey: string,
+  anthropicKey?: string,
+): Promise<{ medicines: Medicine[]; model: string }> {
   const google = createGoogleGenerativeAI({ apiKey });
-  const r = await tryInTurn(MODELS, async (id) => ({
+  const anthropic = anthropicKey ? createAnthropic({ apiKey: anthropicKey }) : null;
+  const ids = [...(apiKey ? MODELS : []), ...(anthropic ? [CLAUDE_MODEL] : [])];
+  const r = await tryInTurn(ids, async (id) => ({
     model: id,
     result: await generateText({
-      model: google(id),
+      model: id === CLAUDE_MODEL && anthropic ? anthropic(id) : google(id),
       maxRetries: 0,
       abortSignal: AbortSignal.timeout(30_000),
       output: Output.object({ schema: ReadResult }),
