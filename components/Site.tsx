@@ -216,7 +216,7 @@ export function Safety() {
         <li>Only medicines written on the paper go on the card. Dose Card never adds, removes or suggests a medicine or dose.</li>
         <li>Anything unclear is marked for you to check, and every card says to confirm with your doctor or pharmacist.</li>
         <li>
-          The photo is sent once to Google&apos;s Gemini to be read, and isn&apos;t kept. Your list stays in this browser, and the QR
+          The photo is sent once to Google&apos;s Gemini (or Anthropic&apos;s Claude if Gemini is busy) to be read, and isn&apos;t kept. Your list stays in this browser, and the QR
           code and shared links carry the card inside the link itself. There are no accounts.
         </li>
       </ul>

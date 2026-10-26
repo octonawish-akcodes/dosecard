@@ -113,3 +113,4 @@ Activity mode:
 - Noto Sans Devanagari loads with `weight: "variable"`. The static 400/700 weights fail the Turbopack build ("next/font/google queries have exactly one entry"); the other scripts use static weights.
 - Saving waits until the saved list has been restored. In development React runs effects twice, and the empty first render was overwriting the saved list.
 - Card design changed from picture tiles in time-of-day bands to a tick chart (medicines down the side, times across). At the first hands-on check the learner said the design "looks very complex" and asked for easy options. They chose the tick chart from four rendered designs. `buildCard` was replaced by `buildChart`; PRD > The card and spec > Card preview were updated.
+- Gemini was overloaded (503 on all three models) the night of submission, so the learner added Claude (`claude-sonnet-5-5`) as a last fallback. The site's privacy line, README and spec now say the photo may go to Claude.

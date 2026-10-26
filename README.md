@@ -29,7 +29,7 @@ See [the Evidence page](https://dosecard.vercel.app/evidence). The test prescrip
 Needs Node 22+ and pnpm.
 
 ```bash
-cp .env.example .env.local    # add your Gemini API key
+cp .env.example .env.local    # add your Gemini API key (Anthropic key optional, used as a backup)
 pnpm install
 pnpm dev                       # http://localhost:3000
 pnpm test                      # unit tests
@@ -40,7 +40,7 @@ Without a key, typing and printing still work, and the sample prescription uses 
 ## How it works
 
 - **`app/page.tsx` + `components/`**: the single screen with the start buttons, medicine list, card details and live card preview. The list is saved in this browser's `localStorage` only.
-- **`app/api/read/route.ts` + `lib/reader.ts`**: the one server function. It sends the photo to Gemini (`gemini-3.5-flash`, falling back to two other models) with a fixed JSON schema, then validates the result with zod. The photo is never stored or logged.
+- **`app/api/read/route.ts` + `lib/reader.ts`**: the one server function. It sends the photo to Gemini (`gemini-3.5-flash`, falling back to two other Gemini models, then to Claude `claude-sonnet-5-5` if an Anthropic key is set) with a fixed JSON schema, then validates the result with zod. The photo is never stored or logged.
 - **`lib/share.ts`, `components/CardQR.tsx`, `app/listen/`**: the talking card. The QR link carries the card in its `#` fragment, and `/listen` reads it aloud with the browser's speech voices (`lib/speech.ts`).
 - **`lib/translations.ts`**: the fixed card labels for each language. Switching language is instant and never calls the AI.
 - **`app/card.css`**: the card and the print rules, which print only the card on A4.
@@ -49,7 +49,7 @@ Without a key, typing and printing still work, and the sample prescription uses 
 
 - **Sample data:** `public/sample/prescription.jpg` is a fictional prescription made for this project. `public/sample/reading.json` is a real reading of it, used only if the live reader is unavailable, and is labelled "Sample reading (saved)" in the app.
 - **Translations** were machine-drafted. Corrections from native speakers are very welcome.
-- **Privacy:** no accounts and no database. The photo is sent once to Gemini for reading and isn't kept.
+- **Privacy:** no accounts and no database. The photo is sent once to Gemini (or Claude, if every Gemini model is busy) for reading and isn't kept.
 
 ## Licence
 

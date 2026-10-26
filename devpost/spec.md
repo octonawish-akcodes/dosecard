@@ -221,6 +221,7 @@ dosecard/
 ```
 
 ## External Services and Dependencies
+- **Anthropic Claude API, through @ai-sdk/anthropic (backup only).** Used only when all three Gemini models fail and `ANTHROPIC_API_KEY` is set. Model: `claude-sonnet-5-5`. Docs: https://ai-sdk.dev/providers/ai-sdk-providers/anthropic
 - **Google Gemini API, through @ai-sdk/google.**
   - Call: `generateText({ model: google(id), output: Output.object({ schema: ReadResult }), messages: [{ role: "user", content: [{ type: "text", text: PROMPT }, { type: "image", image: bytes, mediaType: "image/jpeg" }] }] })`.
   - `ReadResult` is `{ medicines: { name, amount, unit, times, food, note, unsure: string[] }[] }`.
